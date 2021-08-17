@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rigidBody = GetComponent<Rigidbody2D>();
+        this.rigidBody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (collider.tag == "InteractionObj")
         {
-            interactionObj = collider.gameObject;
+            this.interactionObj = collider.gameObject;
             collider.gameObject.SendMessage("setInteractiveComplements", true);
         }
     }
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
     {
         if(collider.tag == "InteractionObj")
         {
-            rigidBody.WakeUp();           
+            this.rigidBody.WakeUp();           
         }
     }
 
@@ -58,16 +58,16 @@ public class PlayerController : MonoBehaviour
     {
         if (collider.tag == "InteractionObj")
         {
-            interactionObj = null;
+            this.interactionObj = null;
             collider.gameObject.SendMessage("setInteractiveComplements", false);
         }
     }
 
     private void callInteractionMethod()
     {
-        if (interactionObj != null)
+        if (this.interactionObj != null)
         {
-            interactionObj.SendMessage("interaction");
+            this.interactionObj.SendMessage("interaction");
         }
     }
 }
