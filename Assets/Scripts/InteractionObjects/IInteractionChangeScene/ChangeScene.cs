@@ -17,7 +17,7 @@ public class ChangeScene : Interaction
     [SerializeField]
     private CinemachineVirtualCamera virtualCamera = null;
     [SerializeField]
-    private int sizeCamera = 0;
+    private double sizeCamera = 0.0;
     [Header("Target Scene configuration")]
     [SerializeField]
     private Transform targetPlace = null;
@@ -34,9 +34,10 @@ public class ChangeScene : Interaction
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
+            System.Console.Write("Standard DateTime Format Specifiers");
             this.player.position = this.targetPlace.position;
             this.confiner.m_BoundingShape2D = this.bounding;
-            this.virtualCamera.m_Lens.OrthographicSize = this.sizeCamera;
+            this.virtualCamera.m_Lens.OrthographicSize = (float) this.sizeCamera;
         }
     }
 }
