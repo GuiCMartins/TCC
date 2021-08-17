@@ -24,6 +24,10 @@ public class ChangeScene : Interaction
     [Header("Player configuration")]
     [SerializeField]
     private Transform player = null;
+    [SerializeField]
+    private double sizePlayerX = 0.0;
+    [SerializeField]
+    private double sizePlayerY = 0.0;
 
     public override void interaction()
     {
@@ -36,6 +40,7 @@ public class ChangeScene : Interaction
         {
             System.Console.Write("Standard DateTime Format Specifiers");
             this.player.position = this.targetPlace.position;
+            this.player.transform.localScale = new Vector3((float)this.sizePlayerX, (float)this.sizePlayerY, 0);
             this.confiner.m_BoundingShape2D = this.bounding;
             this.virtualCamera.m_Lens.OrthographicSize = (float) this.sizeCamera;
         }
