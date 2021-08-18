@@ -9,6 +9,12 @@ public class InteractionLever : Interaction
     private GameObject levers = null;
 
     private bool on = false;
+    private Animator animator;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     public override void interaction()
     {
@@ -28,8 +34,19 @@ public class InteractionLever : Interaction
 
             if (this.on)
             {
+                turnOnOffAnimation(true);
                 this.levers.GetComponent<LeverController>().setLeverAux(this.gameObject);
+            }
+            else
+            {
+                turnOnOffAnimation(false);
             }
         }
     }
+
+    private void turnOnOffAnimation(bool isTurnOn)
+    {
+        animator.SetBool("IsTurnOn", isTurnOn);
+    }
+
 }
