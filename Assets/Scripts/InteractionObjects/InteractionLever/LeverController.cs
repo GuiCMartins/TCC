@@ -5,10 +5,14 @@ using UnityEngine;
 public class LeverController : MonoBehaviour
 {
     //Serialized fields
+    [Header("Levers configuration")]
     [SerializeField]
     private GameObject[] levers = null;
     [SerializeField]
     private GameObject[] leversAux = new GameObject[3] { null, null, null };
+    [Header("Spears configuration")]
+    [SerializeField]
+    private GameObject[] spears = null;
 
     //Non serialized fields
     private int[] finalUnlock = new int[3] { 0, 1, 2 };
@@ -17,6 +21,8 @@ public class LeverController : MonoBehaviour
     void Start()
     {
         setFinalUnlock();
+
+        Debug.Log("Primeiro puzzle");
 
         for (int i = 0; i < 3; i++)
         {
@@ -32,10 +38,11 @@ public class LeverController : MonoBehaviour
 
             if (this.levers[this.finalUnlock[0]] == this.leversAux[0] && this.levers[this.finalUnlock[1]] == this.leversAux[1] && this.levers[this.finalUnlock[2]] == this.leversAux[2])
             {
-                Debug.Log("BRABO!!!");
+                cancelTheSpears();
             }
 
             this.leversAux = new GameObject[] { null, null, null };
+            turnAllLeversOff();
         }
     }
 
@@ -49,9 +56,18 @@ public class LeverController : MonoBehaviour
         return false;
     }
 
+    private void turnAllLeversOff()
+    {
+        this.levers[0].GetComponent<InteractionLever>().turnOnOffAnimation(false);
+        this.levers[1].GetComponent<InteractionLever>().turnOnOffAnimation(false);
+        this.levers[2].GetComponent<InteractionLever>().turnOnOffAnimation(false);
+    }
+
     private void cancelTheSpears()
     {
-
+        this.spears[0].GetComponent<Animator>().SetBool("IsTurnOff", true);
+        this.spears[1].GetComponent<Animator>().SetBool("IsTurnOff", true);
+        this.spears[2].GetComponent<Animator>().SetBool("IsTurnOff", true);
     }
 
     private void setDifferentRandomNumberFromFirst(System.Random randomNumber)
@@ -86,6 +102,18 @@ public class LeverController : MonoBehaviour
             if(this.leversAux[i] == null)
             {
                 this.leversAux[i] = gameObject;
+                break;
+            }
+        }
+    }
+
+    public void removeLeverAux(GameObject gameObject)
+    {
+        for (int i = 0; i < this.leversAux.Length; i++)
+        {
+            if (this.leversAux[i] == gameObject)
+            {
+                this.leversAux[i] = null;
                 break;
             }
         }

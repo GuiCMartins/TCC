@@ -13,7 +13,7 @@ public class InteractionLever : Interaction
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        this.animator = GetComponent<Animator>();
     }
 
     public override void interaction()
@@ -40,13 +40,14 @@ public class InteractionLever : Interaction
             else
             {
                 turnOnOffAnimation(false);
+                this.levers.GetComponent<LeverController>().removeLeverAux(this.gameObject);
             }
         }
     }
 
-    private void turnOnOffAnimation(bool isTurnOn)
+    public void turnOnOffAnimation(bool isTurnOn)
     {
-        animator.SetBool("IsTurnOn", isTurnOn);
+        this.animator.SetBool("IsTurnOn", isTurnOn);
     }
 
 }
