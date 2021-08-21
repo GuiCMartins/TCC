@@ -8,9 +8,13 @@ public class StatueController : MonoBehaviour
     [Header("Statues configuration")]
     [SerializeField]
     private GameObject[] statues = null;
+    [Header("Door configuration")]
+    [SerializeField]
+    private GameObject door = null;
 
     //Non serialized fields
     private int[] finalUnlock = new int[4] { 0, 1, 2, 3 };
+    private bool isDoorClose = true;
 
     // Start is called before the first frame update
     void Start()
@@ -28,10 +32,20 @@ public class StatueController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isAllStatuesRight())
+        if (this.isDoorClose)
         {
-            Debug.Log("Abre a porta!!");
+            if (isAllStatuesRight())
+            {
+                openDoor();
+            }
         }
+    }
+
+    private void openDoor()
+    {
+        this.isDoorClose = false;
+        this.door.GetComponent<Animator>().SetBool("IsOpen", true);
+        this.door.GetComponent<BoxCollider2D>().enabled = false;
     }
 
     private void setFinalUnlock()
