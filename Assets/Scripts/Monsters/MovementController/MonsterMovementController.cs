@@ -2,47 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterMovementController : MonoBehaviour
+public class MonsterMovementController : MovementBase
 {
-    //Serialized fields
-    [Header("Player configuration")]
-    [SerializeField]
-    private GameObject player = null;
-    [Header("Monster configuration")]
-    [SerializeField]
-    private Transform lentineoPosition = null;
-    [SerializeField]
-    private float speed = 0.1f;
-
     //Non serialized fields
     private bool isFollowPlayer = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void FixedUpdate()
     {
         if (!this.isFollowPlayer)
         {
-            transform.position = Vector3.MoveTowards(transform.position, lentineoPosition.position, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, base.getMonsterPosition().position, base.getSpeed() * Time.deltaTime);
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        base.setMovementation();
     }
 
     void OnTriggerStay2D(Collider2D collider)
     {
         if (collider.tag == "Player")
         {
-            this.isFollowPlayer = true;
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+            base.setIsFollowPlayer(true);
+            transform.position = Vector3.MoveTowards(transform.position, base.getPlayer().transform.position, base.getSpeed() * Time.deltaTime);
         }
     }
 
@@ -50,7 +34,7 @@ public class MonsterMovementController : MonoBehaviour
     {
         if (collider.tag == "Player")
         {
-            this.isFollowPlayer = false;
+            base.setIsFollowPlayer(false);
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
-{
+{ 
     //Non serialized fields
     private Vector2 position = Vector2.zero;
     private Rigidbody2D rigidBody;
@@ -31,7 +31,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        setMovementation();
+       setMovementation();
     }
 
     private void setMovementation()
@@ -52,7 +52,7 @@ public class Movement : MonoBehaviour
 
     private void move()
     {
-        rigidBody.MovePosition(rigidBody.position + position);
+        rigidBody.MovePosition(rigidBody.position + this.position);
     }
 
     private void WalkAnimation(bool isWalking)
