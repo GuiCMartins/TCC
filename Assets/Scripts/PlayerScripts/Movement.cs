@@ -6,9 +6,9 @@ public class Movement : MonoBehaviour
 { 
     //Non serialized fields
     private Vector2 position = Vector2.zero;
-    private Rigidbody2D rigidBody;
-    private Animator animator;
-    private bool isLeft;
+    private Rigidbody2D rigidBody = null;
+    private Animator animator = null;
+    private bool isLeft = false;
 
     //Serialized Fields
     [Header("Speed Configuration")]
