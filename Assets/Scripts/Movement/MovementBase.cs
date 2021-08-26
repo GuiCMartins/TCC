@@ -82,4 +82,9 @@ public abstract class MovementBase : MonoBehaviour
     {
         this.isFollowPlayer = isFollowPlayer;
     }
+
+    public Animator getAnimator()
+    {
+        return this.animator;
+    }
 }

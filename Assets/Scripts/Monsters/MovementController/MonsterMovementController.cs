@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class MonsterMovementController : MovementBase
 {
-    //Non serialized fields
-    private bool isFollowPlayer = false;
-
     void FixedUpdate()
     {
-        if (!this.isFollowPlayer)
+        if (!base.getIsFollowPlayer())
         {
             transform.position = Vector3.MoveTowards(transform.position, base.getMonsterPosition().position, base.getSpeed() * Time.deltaTime);
         }
@@ -23,7 +20,7 @@ public class MonsterMovementController : MovementBase
 
     void OnTriggerStay2D(Collider2D collider)
     {
-        if (collider.tag == "Player")
+        if (collider.tag == "Player" && !base.getAnimator().GetBool("IsAtacking"))
         {
             base.setIsFollowPlayer(true);
             transform.position = Vector3.MoveTowards(transform.position, base.getPlayer().transform.position, base.getSpeed() * Time.deltaTime);

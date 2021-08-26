@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    //Non serialized fields
+    //Serialized fields
     [SerializeField]
     private GameController gameController;
     [SerializeField]
