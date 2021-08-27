@@ -25,7 +25,7 @@ public abstract class MovementBase : MonoBehaviour
 
     public void setMovementation()
     {
-        if (this.gameObject.transform.position.x != this.monsterPosition.position.x || this.gameObject.transform.position.y != this.monsterPosition.position.y)
+        if (this.gameObject.transform.position.x != this.monsterPosition.position.x && !this.animator.GetBool("IsAtacking") || this.gameObject.transform.position.y != this.monsterPosition.position.y && !this.animator.GetBool("IsAtacking"))
         {
             if (this.isFollowPlayer)
             {
