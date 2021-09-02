@@ -13,7 +13,7 @@ public class LibrarianInteraction : Interaction
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            initialQuest.thanksForTheBook();
+            //initialQuest.thanksForTheBook();
         }
     }
 }

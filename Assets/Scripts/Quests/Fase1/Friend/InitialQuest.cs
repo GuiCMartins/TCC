@@ -4,33 +4,68 @@ using UnityEngine;
 
 public class InitialQuest : QuestBase
 {
-    public override void startQuest()
+    //Non Serialized Fields
+    private bool isFightMonster = false;
+    private bool aceptToTalkMom = false;
+    private bool isTalkMom = false;
+
+    public void startQuest()
     {
-        if (this == this.getGameController().getQuestBase()[0]) {
-            setIsOpened();
-        }
+        setIsOpened();
     }
 
-    public override void startDialog()
+    public void startDialog()
     {
         this.getFC()[0].ExecuteBlock(this.getDialog()[0]);
     }
 
-    public override void startOnGoingQuestDialog()
+    public void startSecondDialog()
     {
         this.getFC()[0].ExecuteBlock(this.getDialog()[1]);
     }
 
-    public override void startQuestCompletedDialog()
+    public void startOnGoingQuestDialog()
     {
-        this.getFC()[0].ExecuteBlock(this.getDialog()[3]);
-        Destroy(this);
+        this.getFC()[0].ExecuteBlock(this.getDialog()[2]);
     }
 
-    public void thanksForTheBook()
+    public void notTalkToMom()
     {
-        if (this.getIsOpened()) {
-            this.getFC()[1].ExecuteBlock(this.getDialog()[2]);
-        }
+        this.getFC()[0].ExecuteBlock(this.getDialog()[3]);
+    }
+
+    public void talkToMom()
+    {
+        this.getFC()[0].ExecuteBlock(this.getDialog()[4]);
+    }
+
+    public void setIsFightMonster()
+    {
+        this.isFightMonster = true;
+    }
+
+    public void setIsTalkMom()
+    {
+        this.isTalkMom = true;
+    }
+
+    public void setAceptToTalkMom()
+    {
+        this.aceptToTalkMom = true;
+    }
+
+    public bool getIsFightMonster()
+    {
+        return this.isFightMonster;
+    }
+
+    public bool getIsTalkMom()
+    {
+        return this.isTalkMom;
+    }
+
+    public bool getAceptToTalkMom()
+    {
+        return this.aceptToTalkMom;
     }
 }

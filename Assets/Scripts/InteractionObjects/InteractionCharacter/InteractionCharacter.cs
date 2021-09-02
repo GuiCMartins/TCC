@@ -7,7 +7,7 @@ public class InteractionCharacter : Interaction
     //Serialized fields
     [Header("Game Controller configuration")]
     [SerializeField]
-    private GameController gameController = null;
+    private InitialQuest initialQuest = null;
 
     // Start is called before the first frame update
     void Start()
@@ -24,20 +24,36 @@ public class InteractionCharacter : Interaction
     public override void interaction()
     {
         if (Input.GetKeyDown(KeyCode.F)) {
-            if (!gameController.getQuestBase()[0].getIsOpened()) {
-                gameController.getQuestBase()[0].startDialog();
-            }
-            else
+            firstQuest();
+        }
+    }
+
+    private void firstQuest()
+    {
+        if (!this.initialQuest.getIsOpened())
+        {
+            this.initialQuest.startDialog();
+        }
+        else
+        {
+            if (this.initialQuest.getIsFightMonster())
             {
-                if (gameController.getQuestBase()[0].getIsCompleted())
+                if (!this.initialQuest.getAceptToTalkMom())
                 {
-                    gameController.getQuestBase()[0].startQuestCompletedDialog();
-                    gameController.getQuestBase().RemoveAt(0);
+                    this.initialQuest.startSecondDialog();
+                } 
+                else if (this.initialQuest.getIsTalkMom())
+                {
+                    Debug.Log("TUTORIAL");
                 }
                 else
                 {
-                    gameController.getQuestBase()[0].startOnGoingQuestDialog();
+                    this.initialQuest.notTalkToMom();
                 }
+            }
+            else
+            {
+                this.initialQuest.startOnGoingQuestDialog();
             }
         }
     }

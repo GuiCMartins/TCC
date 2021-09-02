@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
     [Header("Scrip PlayerStats configuration")]
     [SerializeField]
     private PlayerStats playerStats = null;
+    [Header("Quest configuration")]
+    [SerializeField]
+    private InitialQuest initialQuest = null;
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +50,10 @@ public class PlayerController : MonoBehaviour
         else if (collider.tag == "Damage")
         {
             this.playerStats.takeDamage(7);
+        }
+        else if (collider.tag == "TESTE")
+        {
+            this.initialQuest.setIsFightMonster();
         }
     }
 

@@ -20,11 +20,6 @@ public abstract class QuestBase : MonoBehaviour
     private bool isCompleted = false;
     private bool isOpened = false;
 
-    public abstract void startQuest();
-    public abstract void startDialog();
-    public abstract void startOnGoingQuestDialog();
-    public abstract void startQuestCompletedDialog();
-
     public void setIsCompleted()
     {
         this.isCompleted = true;
