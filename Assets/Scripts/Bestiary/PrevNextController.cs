@@ -18,11 +18,17 @@ public class PrevNextController : MonoBehaviour
         this.pages[0].SetActive(true);
         this.pages[1].SetActive(false);
         this.pages[2].SetActive(false);
+        this.pages[3].SetActive(false);
+        this.pages[4].SetActive(false);
+        this.pages[5].SetActive(false);
+        this.pages[6].SetActive(false);
+        this.pages[7].SetActive(false);
+        this.pages[8].SetActive(false);
     }
 
     public void nextPage()
     {
-        if(this.countPages < 2)
+        if(this.countPages < 8)
         {
             this.pages[this.countPages].SetActive(false);
             this.countPages++;
