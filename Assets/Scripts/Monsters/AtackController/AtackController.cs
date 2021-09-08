@@ -6,9 +6,6 @@ using UnityEngine;
 public class AtackController : MonoBehaviour
 {
     //Serialized Fields
-    [Header("Speed Configuration")]
-    [SerializeField]
-    private int damage = 5;
     [Header("Animator Configuration")]
     [SerializeField]
     private Animator animator = null;
