@@ -5,7 +5,7 @@ using UnityEngine;
 public class AtackDamage : MonoBehaviour
 {
     //Serialized Fields
-    [Header("Speed Configuration")]
+    [Header("Damage Configuration")]
     [SerializeField]
     private int damage = 5;
 

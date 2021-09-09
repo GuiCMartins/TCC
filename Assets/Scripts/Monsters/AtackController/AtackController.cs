@@ -12,6 +12,9 @@ public class AtackController : MonoBehaviour
     [Header("Player configuration")]
     [SerializeField]
     private GameObject player = null;
+    [Header("Projectile configuration")]
+    [SerializeField]
+    private GameObject projectile = null;
 
     // Start is called before the first frame update
     void Start()
@@ -57,5 +60,10 @@ public class AtackController : MonoBehaviour
     public void turnAtackColliderOff()
     {
         this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+    }
+
+    public void atackRange()
+    {
+        Instantiate(this.projectile, transform.position, Quaternion.identity);
     }
 }
