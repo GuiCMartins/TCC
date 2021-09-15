@@ -16,12 +16,6 @@ public class AtackController : MonoBehaviour
     [SerializeField]
     private GameObject projectile = null;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -47,7 +41,6 @@ public class AtackController : MonoBehaviour
     {
         if (collider.tag == "Player")
         {
-            this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
             this.animator.SetBool("IsAtacking", false);
         }
     }
