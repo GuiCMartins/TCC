@@ -8,7 +8,8 @@ public class InteractionDarkWoodKey : Interaction
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            Debug.Log("Open the door!");
+            GameObject.Find("Fence1").GetComponent<Animator>().SetBool("IsOpen", true);
+            GameObject.Find("Fence2").GetComponent<Animator>().SetBool("IsOpen", true);
             Destroy(this.gameObject);
         }
     }
