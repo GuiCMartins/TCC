@@ -1,5 +1,66 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3738310161472647024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7025263683265426981}
+  - component: {fileID: 6087448278228619231}
+  - component: {fileID: 1649444617477068480}
+  m_Layer: 0
+  m_Name: AtackRange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7025263683265426981
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3738310161472647024}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8666671918800460236}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &6087448278228619231
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3738310161472647024}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.015340328}
+  serializedVersion: 2
+  m_Radius: 0.69579077
+--- !u!114 &1649444617477068480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3738310161472647024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2ab20dbcf3c24c40b02fb877b7e8c91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 9023364572917101079}
 --- !u!1 &8736581611459243537
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,8 +73,7 @@ GameObject:
   - component: {fileID: 4418627819166708554}
   - component: {fileID: 9023364572917101079}
   - component: {fileID: 4799288902762006958}
-  - component: {fileID: 8784145035710056895}
-  - component: {fileID: 898434127089098445}
+  - component: {fileID: 6110853822625655442}
   m_Layer: 0
   m_Name: Witch
   m_TagString: Untagged
@@ -31,7 +91,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -84.408, y: 11.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 7025263683265426981}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -121,23 +182,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.0023388863}
   serializedVersion: 2
   m_Radius: 0.10362673
---- !u!58 &8784145035710056895
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8736581611459243537}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.04347253, y: 0.01871252}
-  serializedVersion: 2
-  m_Radius: 0.8704984
---- !u!114 &898434127089098445
+--- !u!114 &6110853822625655442
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,10 +191,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8736581611459243537}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2ab20dbcf3c24c40b02fb877b7e8c91, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d444225ce660264b9565cf4525f1f92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 9023364572917101079}
-  player: {fileID: 5095381094109191287, guid: a899c39a047edb545ae6695a8700ccd0, type: 3}
   projectile: {fileID: 2688172713520587223, guid: 035ece3ccbeb22449b551c2e544dfc14,
     type: 3}
