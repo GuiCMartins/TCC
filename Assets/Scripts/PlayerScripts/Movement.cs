@@ -18,9 +18,9 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rigidBody = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        isLeft = false;
+        this.rigidBody = GetComponent<Rigidbody2D>();
+        this.animator = GetComponent<Animator>();
+        this.isLeft = false;
     }
 
     void FixedUpdate()
@@ -34,12 +34,17 @@ public class Movement : MonoBehaviour
        setMovementation();
     }
 
+    public bool getIsLeft()
+    {
+        return this.isLeft;
+    }
+
     private void setMovementation()
     {
-        position.x = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        position.y = Input.GetAxis("Vertical") * speed * Time.deltaTime;
+        this.position.x = Input.GetAxis("Horizontal") * this.speed * Time.deltaTime;
+        this.position.y = Input.GetAxis("Vertical") * this.speed * Time.deltaTime;
 
-        if(position.x != 0 || position.y != 0)
+        if(this.position.x != 0 || this.position.y != 0)
         {
             flip();
             WalkAnimation(true);
@@ -52,20 +57,20 @@ public class Movement : MonoBehaviour
 
     private void move()
     {
-        rigidBody.MovePosition(rigidBody.position + this.position);
+        this.rigidBody.MovePosition(this.rigidBody.position + this.position);
     }
 
     private void WalkAnimation(bool isWalking)
     {
-        animator.SetBool("IsWalking", isWalking);
+        this.animator.SetBool("IsWalking", isWalking);
     }
 
     private void flip()
     {
-        if(position.x > 0 && isLeft || position.x < 0 && !isLeft)
+        if(this.position.x > 0 && this.isLeft || this.position.x < 0 && !this.isLeft)
         {
 
-            isLeft = !isLeft;
+            this.isLeft = !this.isLeft;
             float x = this.gameObject.transform.localScale.x;
             x *= -1;
 

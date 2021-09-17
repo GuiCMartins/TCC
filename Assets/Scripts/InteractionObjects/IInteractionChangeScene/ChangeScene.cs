@@ -23,7 +23,7 @@ public class ChangeScene : Interaction
     private Transform targetPlace = null;
     [Header("Player configuration")]
     [SerializeField]
-    private Transform player = null;
+    private GameObject player = null;
     [SerializeField]
     private double sizePlayerX = 0.0;
     [SerializeField]
@@ -39,10 +39,22 @@ public class ChangeScene : Interaction
         if (Input.GetKeyDown(KeyCode.F))
         {
             System.Console.Write("Standard DateTime Format Specifiers");
-            this.player.position = this.targetPlace.position;
-            this.player.transform.localScale = new Vector3((float)this.sizePlayerX, (float)this.sizePlayerY, 0);
+            this.player.transform.position = this.targetPlace.position;
+            flip();
             this.confiner.m_BoundingShape2D = this.bounding;
             this.virtualCamera.m_Lens.OrthographicSize = (float) this.sizeCamera;
+        }
+    }
+
+    private void flip()
+    {
+        if (this.player.GetComponent<Movement>().getIsLeft())
+        {
+            this.player.transform.localScale = new Vector3((float) -this.sizePlayerX, (float)this.sizePlayerY, 0);
+        }
+        else
+        {
+            this.player.transform.localScale = new Vector3((float)this.sizePlayerX, (float)this.sizePlayerY, 0);
         }
     }
 }
