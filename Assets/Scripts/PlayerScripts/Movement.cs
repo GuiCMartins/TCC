@@ -44,7 +44,7 @@ public class Movement : MonoBehaviour
         this.position.x = Input.GetAxis("Horizontal") * this.speed * Time.deltaTime;
         this.position.y = Input.GetAxis("Vertical") * this.speed * Time.deltaTime;
 
-        if(this.position.x != 0 || this.position.y != 0)
+        if(this.position.x != 0 && !GetComponent<Attack>().getIsAtacking() || this.position.y != 0 && !GetComponent<Attack>().getIsAtacking())
         {
             flip();
             WalkAnimation(true);
