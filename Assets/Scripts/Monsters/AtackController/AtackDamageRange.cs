@@ -30,7 +30,10 @@ public class AtackDamageRange : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        collider.gameObject.SendMessage("takeDamage", this.damage);
-        Destroy(this.gameObject);
+        if (collider.tag == "Player")
+        {
+            collider.gameObject.SendMessage("takeDamage", this.damage);
+            Destroy(this.gameObject);
+        }
     }
 }

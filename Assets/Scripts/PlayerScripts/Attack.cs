@@ -31,6 +31,16 @@ public class Attack : MonoBehaviour
         return this.isAtacking;
     }
 
+    public void turnOnAttackDamage()
+    {
+        this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+    }
+
+    public void turnOffAttackDamage()
+    {
+        this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+    }
+
     private void attack(bool isAtacking)
     {
         this.isAtacking = isAtacking;
