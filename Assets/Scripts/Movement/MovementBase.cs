@@ -25,7 +25,7 @@ public abstract class MovementBase : MonoBehaviour
 
     public void setMovementation()
     {
-        if (this.gameObject.transform.position.x != this.monsterPosition.position.x && !this.animator.GetBool("IsAtacking") || this.gameObject.transform.position.y != this.monsterPosition.position.y && !this.animator.GetBool("IsAtacking"))
+        if (this.gameObject.transform.parent.position.x != this.monsterPosition.position.x && !this.animator.GetBool("IsAtacking") || this.gameObject.transform.parent.position.y != this.monsterPosition.position.y && !this.animator.GetBool("IsAtacking"))
         {
             if (this.isFollowPlayer)
             {
@@ -41,14 +41,14 @@ public abstract class MovementBase : MonoBehaviour
 
     public void flip()
     {
-        if (this.gameObject.transform.position.x < this.player.transform.position.x && this.isLeft || this.gameObject.transform.position.x > this.player.transform.position.x && !this.isLeft)
+        if (this.gameObject.transform.parent.position.x < this.player.transform.position.x && this.isLeft || this.gameObject.transform.parent.position.x > this.player.transform.position.x && !this.isLeft)
         {
 
             this.isLeft = !this.isLeft;
-            float x = this.gameObject.transform.localScale.x;
+            float x = this.gameObject.transform.parent.localScale.x;
             x *= -1;
 
-            transform.localScale = new Vector3(x, transform.localScale.y, transform.localScale.z);
+            this.gameObject.transform.parent.localScale = new Vector3(x, this.gameObject.transform.parent.localScale.y, this.gameObject.transform.parent.localScale.z);
 
         }
     }

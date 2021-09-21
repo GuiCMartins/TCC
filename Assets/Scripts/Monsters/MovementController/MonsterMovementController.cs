@@ -8,7 +8,7 @@ public class MonsterMovementController : MovementBase
     {
         if (!base.getIsFollowPlayer())
         {
-            transform.position = Vector3.MoveTowards(transform.position, base.getMonsterPosition().position, base.getSpeed() * Time.deltaTime);
+            this.gameObject.transform.parent.position = Vector3.MoveTowards(transform.position, base.getMonsterPosition().position, base.getSpeed() * Time.deltaTime);
         }
     }
 
@@ -23,7 +23,7 @@ public class MonsterMovementController : MovementBase
         if (collider.tag == "Player" && !base.getAnimator().GetBool("IsAtacking"))
         {
             base.setIsFollowPlayer(true);
-            transform.position = Vector3.MoveTowards(transform.position, base.getPlayer().transform.position, base.getSpeed() * Time.deltaTime);
+            this.gameObject.transform.parent.position = Vector3.MoveTowards(transform.position, base.getPlayer().transform.position, base.getSpeed() * Time.deltaTime);
         }
     }
 
