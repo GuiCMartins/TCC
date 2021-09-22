@@ -16,18 +16,6 @@ public class Slot : MonoBehaviour
     //Non serialized fields
     private Image icon = null;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public bool isSlotEmpty()
     {
         if(icon == null)

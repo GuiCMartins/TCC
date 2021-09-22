@@ -14,18 +14,6 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     private GameObject slots = null;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void addItem(GameObject item)
     {
         foreach(Transform slot in this.slots.transform)
