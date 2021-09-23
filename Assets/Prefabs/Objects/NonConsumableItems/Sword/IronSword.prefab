@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1249118214229176892}
   - component: {fileID: 6102851188734938180}
   - component: {fileID: 6102851188734938183}
+  - component: {fileID: 3130208027247736034}
   m_Layer: 0
   m_Name: IronSword
   m_TagString: InteractionObj
@@ -115,6 +116,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: 5
+--- !u!114 &3130208027247736034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4749622198122956522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e55d454df554bf408e8d0ce960c3d69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6102851187474824672
 GameObject:
   m_ObjectHideFlags: 0

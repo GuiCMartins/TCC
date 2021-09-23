@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4110555538677877123}
   - component: {fileID: 9002639358501369851}
   - component: {fileID: 9002639358501369848}
+  - component: {fileID: 6473409516466758398}
   m_Layer: 0
   m_Name: CooperRing
   m_TagString: InteractionObj
@@ -113,7 +114,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed0190ab495c0047bde672d56abb383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemType: 2
+  isAmulet: 0
+--- !u!114 &6473409516466758398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7616833985881881941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1637c26d13c26be40b16576a48a0ad2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9002639357008447071
 GameObject:
   m_ObjectHideFlags: 0

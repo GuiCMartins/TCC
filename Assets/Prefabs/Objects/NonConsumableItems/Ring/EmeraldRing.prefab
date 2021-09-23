@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: 74604654970805176}
   - component: {fileID: 4966731785110316480}
   - component: {fileID: 4966731785110316483}
+  - component: {fileID: 1512969813056527423}
   m_Layer: 0
   m_Name: EmeraldRing
   m_TagString: InteractionObj
@@ -297,4 +298,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed0190ab495c0047bde672d56abb383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemType: 2
+  isAmulet: 0
+--- !u!114 &1512969813056527423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5888107785196171118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1637c26d13c26be40b16576a48a0ad2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

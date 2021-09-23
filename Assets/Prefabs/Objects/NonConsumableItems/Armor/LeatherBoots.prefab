@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: 7782892122771489114}
   - component: {fileID: 3019117719317348130}
   - component: {fileID: 3019117719317348129}
+  - component: {fileID: 2501312146503607971}
   m_Layer: 0
   m_Name: LeatherBoots
   m_TagString: InteractionObj
@@ -209,7 +210,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4376845153429583244}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.56, y: 0.92, z: 744.81256}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
@@ -296,4 +297,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed0190ab495c0047bde672d56abb383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemType: 6
+  isAmulet: 0
+--- !u!114 &2501312146503607971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4376845153429583244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abaa044c75c77754d99339566c7b3527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameController: {fileID: 5218189929138670181, guid: aed45c7aab4660147983ee8a8e1ed95e,
+    type: 3}

@@ -4,21 +4,10 @@ using UnityEngine;
 
 public class InteractionCollectableItem : Interaction
 {
-    private enum ItemType
-    {
-        Consumable,
-        Amulet,
-        Ring,
-        Helmet,
-        ChestPlate,
-        Sword,
-        Boots
-    };
-
     //Serialized fields
     [Header("Item type configuration")]
     [SerializeField]
-    private ItemType itemType;
+    private bool isAmulet;
 
     //Non serialized fields
     private GameObject gameController = null;
@@ -34,11 +23,16 @@ public class InteractionCollectableItem : Interaction
         colectItem();
     }
 
+    public void useItem(GameObject item)
+    { 
+        GetComponent<UseItemBase>().useItem(item);
+    }
+
     private void colectItem()
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            if (this.itemType == ItemType.Amulet)
+            if (this.isAmulet)
             {
                 this.gameController.transform.GetChild(1).GetComponent<Inventory>().addAmulet(this.gameObject);
             }
@@ -48,6 +42,4 @@ public class InteractionCollectableItem : Interaction
             }
         }
     }
-
-    
 }

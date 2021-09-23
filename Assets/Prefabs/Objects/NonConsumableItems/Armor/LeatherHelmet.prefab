@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: 4904179488736632759}
   - component: {fileID: 138285531269374415}
   - component: {fileID: 138285531269374412}
+  - component: {fileID: -5774123769600135929}
   m_Layer: 0
   m_Name: LeatherHelmet
   m_TagString: InteractionObj
@@ -296,4 +297,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed0190ab495c0047bde672d56abb383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemType: 3
+  isAmulet: 0
+--- !u!114 &-5774123769600135929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490949993510677345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e261e0dc3bf02e45a54153c191abef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameController: {fileID: 5218189929138670181, guid: aed45c7aab4660147983ee8a8e1ed95e,
+    type: 3}

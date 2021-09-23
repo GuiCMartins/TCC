@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed0190ab495c0047bde672d56abb383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemType: 1
+  isAmulet: 1
 --- !u!1 &2037951650629198811
 GameObject:
   m_ObjectHideFlags: 0

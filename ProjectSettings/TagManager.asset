@@ -9,6 +9,7 @@ TagManager:
   - TESTE
   - Mom
   - Monster
+  - HelmetIcon
   layers:
   - Default
   - TransparentFX

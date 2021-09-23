@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: 5160409984993391018}
   - component: {fileID: 178201413915807698}
   - component: {fileID: 178201413915807697}
+  - component: {fileID: -5402824639350130641}
   m_Layer: 0
   m_Name: LargeLifePotion
   m_TagString: InteractionObj
@@ -297,5 +298,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed0190ab495c0047bde672d56abb383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAmulet: 0
-  item: {fileID: 1667101339930101116}
+  itemType: 0
+--- !u!114 &-5402824639350130641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667101339930101116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9b097cae97a0b3479b25039e261e59e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

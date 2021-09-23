@@ -11,6 +11,7 @@ public class Slot : MonoBehaviour
     private int id = 0;
 
     //Non serialized fields
+    private GameObject item = null;
     private Image icon = null;
     private Inventory inventory = null;
 
@@ -29,26 +30,38 @@ public class Slot : MonoBehaviour
         return false;
     }
 
-    public void addItem(Sprite spriteItem)
+    public void addItem(GameObject item)
     {
+        this.item = item;
         this.icon = this.transform.GetChild(0).GetComponent<Image>();
-        this.icon.sprite = spriteItem;
+        this.icon.sprite = item.GetComponent<SpriteRenderer>().sprite;
     }
 
-    public void removeItem()
+    public void removeItemInInventory()
     {
-        this.icon.sprite = null;
-        this.icon = null;
-        this.inventory.removeItem(this.id);
+        freeSprite();
+        this.inventory.removeItemInInventory(this.id);
+    }
+
+    public void removeEquipmentInInventory()
+    {
+        freeSprite();
+        this.inventory.removeEquipmentInInventory(this.id);
     }
 
     public void useItem()
     {
-
+        this.inventory.addEquipments(this.item);
     }
 
     public int getId()
     {
         return this.id;
+    }
+
+    private void freeSprite()
+    {
+        this.icon.sprite = null;
+        this.icon = null;
     }
 }

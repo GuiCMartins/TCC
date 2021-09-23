@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: 2651830705807326901}
   - component: {fileID: 7001229683905396941}
   - component: {fileID: 7001229683905396942}
+  - component: {fileID: -6373234781621552594}
   m_Layer: 0
   m_Name: AmethistRing
   m_TagString: InteractionObj
@@ -297,4 +298,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed0190ab495c0047bde672d56abb383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemType: 2
+  isAmulet: 0
+--- !u!114 &-6373234781621552594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8391050145414384227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1637c26d13c26be40b16576a48a0ad2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

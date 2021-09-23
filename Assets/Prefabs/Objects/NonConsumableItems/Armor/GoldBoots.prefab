@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6821685245370143210}
   - component: {fileID: 1967811498613665682}
   - component: {fileID: 1967811498613665681}
+  - component: {fileID: 8171393049410216371}
   m_Layer: 0
   m_Name: GoldBoots
   m_TagString: InteractionObj
@@ -113,7 +114,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed0190ab495c0047bde672d56abb383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemType: 6
+  isAmulet: 0
+--- !u!114 &8171393049410216371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014630198403654972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abaa044c75c77754d99339566c7b3527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameController: {fileID: 5218189929138670181, guid: aed45c7aab4660147983ee8a8e1ed95e,
+    type: 3}
 --- !u!1 &1967811498094353974
 GameObject:
   m_ObjectHideFlags: 0
