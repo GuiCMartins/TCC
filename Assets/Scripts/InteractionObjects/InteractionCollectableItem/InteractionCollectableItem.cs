@@ -4,18 +4,29 @@ using UnityEngine;
 
 public class InteractionCollectableItem : Interaction
 {
-    //Serialized  fields
-    [Header("Item configuration")]
+    private enum ItemType
+    {
+        Consumable,
+        Amulet,
+        Ring,
+        Helmet,
+        ChestPlate,
+        Sword,
+        Boots
+    };
+
+    //Serialized fields
+    [Header("Item type configuration")]
     [SerializeField]
-    private GameObject item = null;
-    [Header("Inventory configuration")]
-    [SerializeField]
-    private Inventory inventory = null;
+    private ItemType itemType;
+
+    //Non serialized fields
+    private GameObject gameController = null;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        this.gameController = GameObject.FindWithTag("GameController");
     }
 
     public override void interaction()
@@ -27,8 +38,16 @@ public class InteractionCollectableItem : Interaction
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            this.inventory.addItem(this.item);
-            Destroy(this.gameObject);
+            if (this.itemType == ItemType.Amulet)
+            {
+                this.gameController.transform.GetChild(1).GetComponent<Inventory>().addAmulet(this.gameObject);
+            }
+            else
+            {
+                this.gameController.transform.GetChild(1).GetComponent<Inventory>().addItem(this.gameObject);
+            }
         }
     }
+
+    
 }

@@ -6,15 +6,18 @@ using UnityEngine.UI;
 public class Slot : MonoBehaviour
 {
     //Serialized fields
-    [Header("Inventory configuration")]
-    [SerializeField]
-    private Inventory inventory = null;
     [Header("Id configuration")]
     [SerializeField]
     private int id = 0;
 
     //Non serialized fields
     private Image icon = null;
+    private Inventory inventory = null;
+
+    void Start()
+    {
+        this.inventory = GameObject.FindWithTag("GameController").transform.GetChild(1).GetComponent<Inventory>();
+    }
 
     public bool isSlotEmpty()
     {
@@ -37,6 +40,11 @@ public class Slot : MonoBehaviour
         this.icon.sprite = null;
         this.icon = null;
         this.inventory.removeItem(this.id);
+    }
+
+    public void useItem()
+    {
+
     }
 
     public int getId()

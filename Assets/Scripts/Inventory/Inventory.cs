@@ -5,23 +5,42 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     //Non serialized fields
-    [Header("Items on inventory configuration")]
     [SerializeField]
-    private GameObject[] itemsInInventory = null;
+    private GameObject[] itemsInInventory = new GameObject[12];
+    [SerializeField]
+    private GameObject[] AmuletsInInventory = new GameObject[8];
 
     //Serialized Fields
-    [Header("Slot configuration")]
+    [Header("Item slots configuration")]
     [SerializeField]
-    private GameObject slots = null;
+    private GameObject itemSlots = null;
+    [Header("Amulet slots configuration")]
+    [SerializeField]
+    private GameObject amuletSlots = null;
 
     public void addItem(GameObject item)
     {
-        foreach(Transform slot in this.slots.transform)
+        foreach(Transform slot in this.itemSlots.transform)
         {
             if (slot.GetComponent<Slot>().isSlotEmpty())
             {
                 this.itemsInInventory[slot.GetComponent<Slot>().getId()] = item;
                 slot.GetComponent<Slot>().addItem(item.GetComponent<SpriteRenderer>().sprite);
+                item.SetActive(false);
+                break;
+            }
+        }
+    }
+
+    public void addAmulet(GameObject item)
+    {
+        foreach (Transform slot in this.amuletSlots.transform)
+        {
+            if (slot.GetComponent<Slot>().isSlotEmpty())
+            {
+                this.AmuletsInInventory[slot.GetComponent<Slot>().getId()] = item;
+                slot.GetComponent<Slot>().addItem(item.GetComponent<SpriteRenderer>().sprite);
+                item.SetActive(false);
                 break;
             }
         }
