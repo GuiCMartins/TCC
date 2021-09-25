@@ -58,6 +58,7 @@ public class Inventory : MonoBehaviour
             foreach (int id in item.GetComponent<UseItemBase>().getIdSlot()){
                 if (this.equipmentsInInventory[id] == null)
                 {
+                    removeItemOfInventoryAddInEquipment(item);
                     this.equipmentsInInventory[id] = item;
                     this.equipmentSlots.transform.GetChild(id).GetComponent<Slot>().addItem(item);
                     break;
@@ -74,5 +75,29 @@ public class Inventory : MonoBehaviour
     public void removeEquipmentInInventory(int id)
     {
         this.equipmentsInInventory[id] = null;
+    }
+
+    public bool isAnySlotInInventoryEmpty()
+    {
+        foreach (Transform slot in this.itemSlots.transform)
+        {
+            if (slot.GetComponent<Slot>().isSlotEmpty())
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void removeItemOfInventoryAddInEquipment(GameObject item)
+    {
+        foreach (Transform slot in this.itemSlots.transform)
+        {
+            if (this.itemsInInventory[slot.GetComponent<Slot>().getId()] == item)
+            {
+                slot.GetComponent<Slot>().removeItemInInventory();
+                break;
+            }
+        }
     }
 }

@@ -41,12 +41,17 @@ public class Slot : MonoBehaviour
     {
         freeSprite();
         this.inventory.removeItemInInventory(this.id);
+        this.item.SetActive(true);
     }
 
     public void removeEquipmentInInventory()
     {
-        freeSprite();
-        this.inventory.removeEquipmentInInventory(this.id);
+        if (this.inventory.isAnySlotInInventoryEmpty())
+        {
+            freeSprite();
+            this.inventory.addItem(this.item);
+            this.inventory.removeEquipmentInInventory(this.id);
+        }
     }
 
     public void useItem()
