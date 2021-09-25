@@ -5,7 +5,7 @@ using UnityEngine;
 public class BestiaryController : MonoBehaviour
 {
     //Serialized Fields
-    [Header("Inventory configuration")]
+    [Header("Bestiary configuration")]
     [SerializeField]
     private GameObject bestiary = null;
 
