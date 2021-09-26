@@ -14,10 +14,12 @@ public class Slot : MonoBehaviour
     private GameObject item = null;
     private Image icon = null;
     private Inventory inventory = null;
+    private GameObject player = null;
 
     void Start()
     {
         this.inventory = GameObject.FindWithTag("GameController").transform.GetChild(1).GetComponent<Inventory>();
+        this.player = GameObject.FindWithTag("Player");
     }
 
     public bool isSlotEmpty()
@@ -41,6 +43,7 @@ public class Slot : MonoBehaviour
     {
         freeSprite();
         this.inventory.removeItemInInventory(this.id);
+        this.item.transform.position = new Vector3(this.player.transform.position.x, this.player.transform.position.y, this.item.transform.position.z);
         this.item.SetActive(true);
     }
 

@@ -10,6 +10,7 @@ TagManager:
   - Mom
   - Monster
   - HelmetIcon
+  - Inventory
   layers:
   - Default
   - TransparentFX

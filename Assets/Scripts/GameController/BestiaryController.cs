@@ -18,24 +18,15 @@ public class BestiaryController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        openCloseInventory();
+        openBestiary();
     }
 
-    private void openCloseInventory()
+    private void openBestiary()
     {
         if (Input.GetKeyDown(KeyCode.B))
         {
-            bool isOpen = !this.bestiary.activeSelf;
-            this.bestiary.SetActive(isOpen);
-
-            if (isOpen)
-            {
-                Time.timeScale = 0;
-            }
-            else
-            {
-                Time.timeScale = 1;
-            }
+            this.bestiary.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 }

@@ -18,24 +18,15 @@ public class InventoryController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        openCloseInventory();
+        openInventory();
     }
 
-    private void openCloseInventory()
+    private void openInventory()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            bool isOpen = !this.inventory.activeSelf;
-            this.inventory.SetActive(isOpen);
-
-            if (isOpen)
-            {
-                Time.timeScale = 0;
-            }
-            else
-            {
-                Time.timeScale = 1;
-            }
+            this.inventory.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 }

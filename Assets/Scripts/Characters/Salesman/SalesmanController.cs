@@ -12,20 +12,11 @@ public class SalesmanController : Interaction
     public override void interaction()
     {
        
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                bool isOpen = !this.store.activeSelf;
-                this.store.SetActive(isOpen);
-
-                if (isOpen)
-                {
-                    Time.timeScale = 0;
-                }
-                else
-                {
-                    Time.timeScale = 1;
-                }
-            }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            this.store.SetActive(true);
+            Time.timeScale = 0;
+        }
         
     }
 }
