@@ -19340,7 +19340,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5218189928750174902}
-        m_MethodName: removeItemInInventory
+        m_MethodName: dropItemFromInventory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19819,7 +19819,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5218189929356222379}
-        m_MethodName: removeItemInInventory
+        m_MethodName: dropItemFromInventory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20401,7 +20401,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5218189928823840763}
-        m_MethodName: removeItemInInventory
+        m_MethodName: dropItemFromInventory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20891,7 +20891,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5218189928571116950}
-        m_MethodName: removeItemInInventory
+        m_MethodName: dropItemFromInventory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22064,7 +22064,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5218189928497489825}
-        m_MethodName: removeItemInInventory
+        m_MethodName: dropItemFromInventory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22687,7 +22687,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5218189928362721244}
-        m_MethodName: removeItemInInventory
+        m_MethodName: dropItemFromInventory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23279,7 +23279,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5218189927730974380}
-        m_MethodName: removeItemInInventory
+        m_MethodName: dropItemFromInventory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23626,7 +23626,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5218189928287479900}
-        m_MethodName: removeItemInInventory
+        m_MethodName: dropItemFromInventory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23873,7 +23873,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5218189927444376961}
-        m_MethodName: removeItemInInventory
+        m_MethodName: dropItemFromInventory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -32971,7 +32971,7 @@ PrefabInstance:
     - target: {fileID: 4791012560000598566, guid: aa1ebeb2b9c6bd342868b0ec9e2b2574,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -468.8081
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4791012560000598566, guid: aa1ebeb2b9c6bd342868b0ec9e2b2574,
         type: 3}

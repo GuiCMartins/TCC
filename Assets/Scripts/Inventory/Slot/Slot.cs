@@ -39,12 +39,16 @@ public class Slot : MonoBehaviour
         this.icon.sprite = item.GetComponent<SpriteRenderer>().sprite;
     }
 
+    public void dropItemFromInventory()
+    {
+        removeItemInInventory();
+        dropItem();
+    }
+
     public void removeItemInInventory()
     {
         freeSprite();
         this.inventory.removeItemInInventory(this.id);
-        this.item.transform.position = new Vector3(this.player.transform.position.x, this.player.transform.position.y, this.item.transform.position.z);
-        this.item.SetActive(true);
     }
 
     public void removeEquipmentInInventory()
@@ -71,5 +75,11 @@ public class Slot : MonoBehaviour
     {
         this.icon.sprite = null;
         this.icon = null;
+    }
+
+    private void dropItem()
+    {
+        this.item.transform.position = new Vector3(this.player.transform.position.x, this.player.transform.position.y, this.item.transform.position.z);
+        this.item.SetActive(true);
     }
 }
