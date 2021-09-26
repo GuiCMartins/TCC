@@ -9,6 +9,10 @@ public class Slot : MonoBehaviour
     [Header("Id configuration")]
     [SerializeField]
     private int id = 0;
+    //Serialized fields
+    [Header("Sprite default configuration")]
+    [SerializeField]
+    private Sprite spriteDefault = null;
 
     //Non serialized fields
     private GameObject item = null;
@@ -41,29 +45,32 @@ public class Slot : MonoBehaviour
 
     public void dropItemFromInventory()
     {
-        removeItemInInventory();
         dropItem();
+        removeItemInInventory();
     }
 
     public void removeItemInInventory()
     {
-        freeSprite();
         this.inventory.removeItemInInventory(this.id);
+        removeItemSlot();
     }
 
     public void removeEquipmentInInventory()
     {
         if (this.inventory.isAnySlotInInventoryEmpty())
         {
-            freeSprite();
             this.inventory.addItem(this.item);
             this.inventory.removeEquipmentInInventory(this.id);
+            removeItemSlot();
         }
     }
 
     public void useItem()
     {
-        this.inventory.addEquipments(this.item);
+        if (this.item != null)
+        {
+            this.inventory.addEquipments(this.item);
+        }
     }
 
     public int getId()
@@ -71,10 +78,11 @@ public class Slot : MonoBehaviour
         return this.id;
     }
 
-    private void freeSprite()
+    private void removeItemSlot()
     {
-        this.icon.sprite = null;
+        this.icon.sprite = this.spriteDefault;
         this.icon = null;
+        this.item = null;
     }
 
     private void dropItem()
