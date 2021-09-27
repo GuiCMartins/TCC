@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     private List<QuestBase> quests = new List<QuestBase>();
 
     //Non serialized fields
+    private System.Random randNum = new System.Random();
     private GameObject player = null;
     private int playerCoins = 0;
     private int playerXp = 0;
@@ -18,7 +19,13 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private int playerTotalLife = 0;
     [SerializeField]
-    private int playerTotalDamage = 0;
+    private int playerDamageMax = 0;
+    [SerializeField]
+    private int playerDamageMin = 0;
+    [SerializeField]
+    private int playerCriticalChance = 0;
+    [SerializeField]
+    private int playerCriticalDamage = 0;
     private int questId = 0;
 
     // Start is called before the first frame update
@@ -28,7 +35,10 @@ public class GameController : MonoBehaviour
 
         updatePlayerCurrentLife();
         updatePlayerTotalLife();
-        this.playerTotalDamage = this.player.GetComponent<PlayerStats>().getTotalDamage();
+        updatePlayerDamageMax();
+        updatePlayerDamageMin();
+        updatePlayerCriticalDamage();
+        updatePlayerCriticalChance();
     }
 
     public void setPlayerCurrentLife(int life)
@@ -46,6 +56,26 @@ public class GameController : MonoBehaviour
         this.playerTotalLife = this.player.GetComponent<PlayerStats>().getTotalLife();
     }
 
+    public void updatePlayerDamageMax()
+    {
+        this.playerDamageMax = this.player.GetComponent<PlayerStats>().getDamageMax();
+    }
+
+    public void updatePlayerDamageMin()
+    {
+        this.playerDamageMin = this.player.GetComponent<PlayerStats>().getDamageMin();
+    }
+
+    public void updatePlayerCriticalDamage()
+    {
+        this.playerCriticalDamage = this.player.GetComponent<PlayerStats>().getCriticalDamage();
+    }
+
+    public void updatePlayerCriticalChance()
+    {
+        this.playerCriticalChance = this.player.GetComponent<PlayerStats>().getCriticalChance();
+    }
+
     public void increasePlayerTotalLife(int life)
     {
         this.player.GetComponent<PlayerStats>().increaseTotalLife(life);
@@ -54,6 +84,18 @@ public class GameController : MonoBehaviour
     public void decreasePlayerTotalLife(int life)
     {
         this.player.GetComponent<PlayerStats>().decreaseTotalLife(life);
+    }
+
+    public int attack()
+    {
+        int chance = randNum.Next(1, 101);
+
+        if (chance <= this.playerCriticalChance)
+        {
+            return this.playerCriticalDamage;
+        }
+
+        return randNum.Next(this.playerDamageMin, this.playerDamageMax + 1);
     }
 
     public void setPlayerCoins(int valueCoin)
@@ -66,6 +108,16 @@ public class GameController : MonoBehaviour
         this.questId = questId;
     }
 
+    public int getPlayerDamageMax()
+    {
+        return this.playerDamageMax;
+    }
+
+    public int getPlayerDamageMin()
+    {
+        return this.playerDamageMin;
+    }
+
     public int getPlayerCoins()
     {
         return this.playerCoins;
@@ -74,11 +126,6 @@ public class GameController : MonoBehaviour
     public int getPlayerTotalLife()
     {
         return this.playerTotalLife;
-    }
-
-    public int getPlayerTotalDamage()
-    {
-        return this.playerTotalDamage;
     }
 
     public int getPlayerXp()

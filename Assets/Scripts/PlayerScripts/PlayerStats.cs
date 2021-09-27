@@ -10,7 +10,13 @@ public class PlayerStats : MonoBehaviour
     private int totalLife = 50;
     [Header("Damage configuration")]
     [SerializeField]
-    private int totalDamage = 10;
+    private int damageMax = 10;
+    [SerializeField]
+    private int damageMin = 10;
+    [SerializeField]
+    private int criticalChance = 0;
+    [SerializeField]
+    private int criticalDamage = 0;
 
     //Non serialized fields
     private GameObject gameController = null;
@@ -61,8 +67,23 @@ public class PlayerStats : MonoBehaviour
         return this.currentLife;
     }
 
-    public int getTotalDamage()
+    public int getDamageMax()
     {
-        return this.totalDamage;
+        return this.damageMax;
+    }
+
+    public int getDamageMin()
+    {
+        return this.damageMin;
+    }
+
+    public int getCriticalDamage()
+    {
+        return this.criticalDamage;
+    }
+
+    public int getCriticalChance()
+    {
+        return this.criticalChance;
     }
 }

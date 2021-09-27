@@ -9,9 +9,9 @@ public abstract class UseItemBase : MonoBehaviour
     private GameObject gameController = null;
 
     public abstract void useItem();
+    public abstract void unUseItem();
     public abstract int[] getIdSlot();
     public abstract bool isConsumable();
-    public abstract void unUseItem();
 
     public void setGameController(GameObject gameController)
     {

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5984107506516382841}
   - component: {fileID: 4566858809669700530}
-  - component: {fileID: 2364897354976626405}
+  - component: {fileID: 8057298995876268317}
   m_Layer: 0
   m_Name: AttackDamage
   m_TagString: Untagged
@@ -58,7 +58,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1316209, y: 0.21114504}
   m_EdgeRadius: 0
---- !u!114 &2364897354976626405
+--- !u!114 &8057298995876268317
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -67,10 +67,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1392640373643764991}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80ae7093fec4cea4488b2bed1616dfd2, type: 3}
+  m_Script: {fileID: 11500000, guid: 84244c869ea965349bc6d1e2b526afcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
 --- !u!1 &5095381094109191287
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,7 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalLife: 100
-  totalDamage: 20
+  totalDamage: 15
 --- !u!114 &5095381094109191279
 MonoBehaviour:
   m_ObjectHideFlags: 0
