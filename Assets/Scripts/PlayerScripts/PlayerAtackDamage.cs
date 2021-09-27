@@ -17,7 +17,7 @@ public class PlayerAtackDamage : MonoBehaviour
     {
         if (collider.tag == "Monster")
         {
-            int damage = this.gameController.GetComponent<GameController>().attack();
+            int damage = this.gameController.GetComponent<GameController>().getPlayerAttackDamage();
             Debug.Log(damage);
             collider.gameObject.SendMessage("takeDamage", damage);
         }

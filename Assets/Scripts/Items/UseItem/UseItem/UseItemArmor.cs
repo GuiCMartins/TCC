@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class UseItemArmor : UseItemBase
 {
     //Serialized Fields
-    [Header("Stats configuration")]
+    [Header("Life stats configuration")]
     [SerializeField]
     private int moreLife = 50;
 
@@ -16,17 +16,40 @@ public abstract class UseItemArmor : UseItemBase
 
     public void useItemBase()
     {
-        base.setGameController(GameObject.FindWithTag("GameController"));
-        base.getGameController().GetComponent<GameController>().increasePlayerTotalLife(this.moreLife);
-        base.updatePlayerLife();
-        base.updatePlayerLifeBar();
+        setGameController();
+        increasePlayerLifeStats();
+        updatePlayerLifeStats();
     }
 
     public void unUseItemBase()
     {
+        setGameController();
+        decreasePlayerLifeStats();
+        updatePlayerLifeStats();
+    }
+
+    private void setGameController()
+    {
         base.setGameController(GameObject.FindWithTag("GameController"));
+    }
+
+    private void increasePlayerLifeStats()
+    {
+        base.getGameController().GetComponent<GameController>().increasePlayerTotalLife(this.moreLife);
+    }
+
+    private void decreasePlayerLifeStats()
+    {
         base.getGameController().GetComponent<GameController>().decreasePlayerTotalLife(this.moreLife);
-        base.updatePlayerLife();
-        base.updatePlayerLifeBar();
+    }
+
+    private void updatePlayerLifeStats()
+    {
+        base.getGameController().GetComponent<GameController>().updatePlayerTotalLife();
+        base.getGameController().GetComponent<GameController>().setPlayerCurrentLife((int)(base.getGameController().GetComponent<GameController>().getPlayerTotalLife() * base.getGameController().GetComponent<HudController>().getLifeBarPercent()));
+        base.getGameController().GetComponent<GameController>().updatePlayerCurrentLife();
+        base.getGameController().GetComponent<HudController>().setLifeBar();
+        //base.updatePlayerLife();
+        //base.updatePlayerLifeBar();
     }
 }

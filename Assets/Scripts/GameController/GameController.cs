@@ -41,10 +41,7 @@ public class GameController : MonoBehaviour
         updatePlayerCriticalChance();
     }
 
-    public void setPlayerCurrentLife(int life)
-    {
-        this.player.GetComponent<PlayerStats>().setCurrentLife(life);
-    }
+    //Update
 
     public void updatePlayerCurrentLife()
     {
@@ -76,27 +73,21 @@ public class GameController : MonoBehaviour
         this.playerCriticalChance = this.player.GetComponent<PlayerStats>().getCriticalChance();
     }
 
+    //Increase
+
     public void increasePlayerTotalLife(int life)
     {
         this.player.GetComponent<PlayerStats>().increaseTotalLife(life);
     }
+
+    //Decrease
 
     public void decreasePlayerTotalLife(int life)
     {
         this.player.GetComponent<PlayerStats>().decreaseTotalLife(life);
     }
 
-    public int attack()
-    {
-        int chance = randNum.Next(1, 101);
-
-        if (chance <= this.playerCriticalChance)
-        {
-            return this.playerCriticalDamage;
-        }
-
-        return randNum.Next(this.playerDamageMin, this.playerDamageMax + 1);
-    }
+    //Set
 
     public void setPlayerCoins(int valueCoin)
     {
@@ -107,6 +98,53 @@ public class GameController : MonoBehaviour
     {
         this.questId = questId;
     }
+
+    public void setPlayerCurrentLife(int life)
+    {
+        this.player.GetComponent<PlayerStats>().setCurrentLife(life);
+    }
+
+    public void setPlayerDamageMin(int damageMin)
+    {
+        this.player.GetComponent<PlayerStats>().setDamageMin(damageMin);
+    }
+
+    public void setPlayerDamageMax(int damageMax)
+    {
+        this.player.GetComponent<PlayerStats>().setDamageMax(damageMax);
+    }
+
+    public void setPlayerCriticalDamage(int criticalDamage)
+    {
+        this.player.GetComponent<PlayerStats>().setCriticalDamage(criticalDamage);
+    }
+
+    public void setPlayerCriticalchance(int criticalchance)
+    {
+        this.player.GetComponent<PlayerStats>().setCriticalchance(criticalchance);
+    }
+
+    public void setBasePlayerDamageMin()
+    {
+        this.player.GetComponent<PlayerStats>().setBaseDamageMin();
+    }
+
+    public void setBasePlayerDamageMax()
+    {
+        this.player.GetComponent<PlayerStats>().setBaseDamageMax();
+    }
+
+    public void setBasePlayerCriticalDamage()
+    {
+        this.player.GetComponent<PlayerStats>().setBaseCriticalDamage();
+    }
+
+    public void setBasePlayerCriticalchance()
+    {
+        this.player.GetComponent<PlayerStats>().setBaseCriticalchance();
+    }
+
+    //Get
 
     public int getPlayerDamageMax()
     {
@@ -136,6 +174,18 @@ public class GameController : MonoBehaviour
     public int getPlayerCurrentLife()
     { 
         return this.playerCurrentLife;
+    }
+
+    public int getPlayerAttackDamage()
+    {
+        int chance = randNum.Next(1, 101);
+
+        if (chance <= this.playerCriticalChance)
+        {
+            return this.playerCriticalDamage;
+        }
+
+        return randNum.Next(this.playerDamageMin, this.playerDamageMax + 1);
     }
 
     public int getQuestId()

@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UseItemSword : UseItemBase
+public class UseItemSword : UseItemWeapon
 {
     public override void useItem()
     {
-        Debug.Log("Sword");
+        base.useItemBase();
     }
 
     public override void unUseItem()
     {
-
+        base.unUseItemBase();
     }
 
     public override int[] getIdSlot()

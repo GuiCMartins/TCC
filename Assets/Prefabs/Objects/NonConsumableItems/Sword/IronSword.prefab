@@ -128,6 +128,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e55d454df554bf408e8d0ce960c3d69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageMin: 35
+  damageMax: 60
+  Criticalchance: 25
+  criticalDamage: 90
 --- !u!1 &6102851187474824672
 GameObject:
   m_ObjectHideFlags: 0

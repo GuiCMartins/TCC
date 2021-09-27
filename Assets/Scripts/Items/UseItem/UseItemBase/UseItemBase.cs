@@ -23,7 +23,9 @@ public abstract class UseItemBase : MonoBehaviour
         return this.gameController;
     }
 
-    public void updatePlayerLife()
+    //Armor
+
+    /*public void updatePlayerLife()
     {
         getGameController().GetComponent<GameController>().updatePlayerTotalLife();
         getGameController().GetComponent<GameController>().setPlayerCurrentLife((int)(getGameController().GetComponent<GameController>().getPlayerTotalLife() * getGameController().GetComponent<HudController>().getLifeBarPercent()));
@@ -33,5 +35,5 @@ public abstract class UseItemBase : MonoBehaviour
     public void updatePlayerLifeBar()
     {
         getGameController().GetComponent<HudController>().setLifeBar();
-    }
+    }*/
 }
