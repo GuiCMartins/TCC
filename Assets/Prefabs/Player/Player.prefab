@@ -87,7 +87,6 @@ GameObject:
   - component: {fileID: 5095381094109191278}
   - component: {fileID: 5095381094109191279}
   - component: {fileID: 5095381094109191284}
-  - component: {fileID: 5095381094109191276}
   - component: {fileID: 5220140592532196158}
   m_Layer: 0
   m_Name: Player
@@ -230,10 +229,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45bed44080b0bb643947d85f5b2089f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameController: {fileID: 0}
-  totalLife: 0
-  currentLife: 0
-  currentDamage: 0
+  totalLife: 100
+  totalDamage: 20
 --- !u!114 &5095381094109191279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,22 +259,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
---- !u!70 &5095381094109191276
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5095381094109191287}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0040115006, y: 0.0066054408}
-  m_Size: {x: 0.14912172, y: 0.20116416}
-  m_Direction: 0
 --- !u!114 &5220140592532196158
 MonoBehaviour:
   m_ObjectHideFlags: 0

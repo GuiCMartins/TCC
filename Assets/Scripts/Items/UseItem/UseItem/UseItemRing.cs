@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class UseItemRing : UseItemBase
 {
-    public override void useItem(GameObject item)
+    public override void useItem()
     {
        
+    }
+
+    public override void unUseItem()
+    {
+
     }
 
     public override int[] getIdSlot()

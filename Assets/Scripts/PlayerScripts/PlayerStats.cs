@@ -6,33 +6,49 @@ public class PlayerStats : MonoBehaviour
 {
     //Serialized fields
     [SerializeField]
-    private GameController gameController;
+    [Header("Life configuration")]
+    private int totalLife = 50;
+    [Header("Damage configuration")]
     [SerializeField]
-    private int totalLife;
-    [SerializeField]
-    private int currentLife;
-    [SerializeField]
-    private int currentDamage;
+    private int totalDamage = 10;
+
+    //Non serialized fields
+    private GameObject gameController = null;
+    private int currentLife = 50;
 
     // Start is called before the first frame update
     void Start()
     {
-        this.gameController = FindObjectOfType(typeof(GameController)) as GameController;
-        this.totalLife = this.gameController.getBasePlayerLife();
-        this.currentLife = this.gameController.getPlayerCurrentLife();
-        this.currentDamage = this.gameController.getBasePlayerDamage();
-    }
+        this.gameController = GameObject.FindWithTag("GameController");
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        this.currentLife = this.totalLife;
     }
 
     public void takeDamage(int damage)
     {
         this.currentLife -= damage;
-        this.gameController.setPlayerCurrentLife(this.currentLife);
+        this.gameController.GetComponent<GameController>().updatePlayerCurrentLife();
+        this.gameController.GetComponent<HudController>().setLifeBar();
+    }
+
+    public void setCurrentLife(int life)
+    {
+        this.currentLife = life;
+    }
+
+    public void increaseTotalLife(int life)
+    {
+        this.totalLife = this.totalLife + life;
+    }
+
+    public void decreaseTotalLife(int life)
+    {
+        this.totalLife = this.totalLife - life;
+    }
+
+    public void setTotalLife(int totalLife)
+    {
+        this.totalLife = totalLife;
     }
 
     public int getTotalLife()
@@ -43,5 +59,10 @@ public class PlayerStats : MonoBehaviour
     public int getCurrentLife()
     {
         return this.currentLife;
+    }
+
+    public int getTotalDamage()
+    {
+        return this.totalDamage;
     }
 }

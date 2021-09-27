@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class UseItemLifePotion : UseItemBase
 {
-    public override void useItem(GameObject item)
+    public override void useItem()
     {
         Debug.Log("LifePotion");
+    }
+
+    public override void unUseItem()
+    {
+
     }
 
     public override int[] getIdSlot()

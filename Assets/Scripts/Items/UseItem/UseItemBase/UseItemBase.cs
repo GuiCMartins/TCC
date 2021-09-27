@@ -5,10 +5,33 @@ using UnityEngine.UI;
 
 public abstract class UseItemBase : MonoBehaviour
 {
-    //Non serialized fields
-    private GameObject item = null;
+    //Non serialized Fields
+    private GameObject gameController = null;
 
-    public abstract void useItem(GameObject item);
+    public abstract void useItem();
     public abstract int[] getIdSlot();
     public abstract bool isConsumable();
+    public abstract void unUseItem();
+
+    public void setGameController(GameObject gameController)
+    {
+        this.gameController = gameController;
+    }
+
+    public GameObject getGameController()
+    {
+        return this.gameController;
+    }
+
+    public void updatePlayerLife()
+    {
+        getGameController().GetComponent<GameController>().updatePlayerTotalLife();
+        getGameController().GetComponent<GameController>().setPlayerCurrentLife((int)(getGameController().GetComponent<GameController>().getPlayerTotalLife() * getGameController().GetComponent<HudController>().getLifeBarPercent()));
+        getGameController().GetComponent<GameController>().updatePlayerCurrentLife();
+    }
+
+    public void updatePlayerLifeBar()
+    {
+        getGameController().GetComponent<HudController>().setLifeBar();
+    }
 }

@@ -5,14 +5,25 @@ using UnityEngine.UI;
 
 public class UseItemHelmet : UseItemBase
 {
-    public override void useItem(GameObject item)
-    {
-        Sprite helmetSprite = GameObject.FindWithTag("HelmetIcon").GetComponent<Image>().sprite;
+    //Serialized Fields
+    [Header("Stats configuration")]
+    [SerializeField]
+    private int moreLife = 50;
 
-        if(helmetSprite == null)
-        {
-            helmetSprite = item.GetComponent<SpriteRenderer>().sprite;
-        }
+    public override void useItem()
+    {
+        base.setGameController(GameObject.FindWithTag("GameController"));
+        base.getGameController().GetComponent<GameController>().increasePlayerTotalLife(this.moreLife);
+        base.updatePlayerLife();
+        base.updatePlayerLifeBar();
+    }
+
+    public override void unUseItem()
+    {
+        base.setGameController(GameObject.FindWithTag("GameController"));
+        base.getGameController().GetComponent<GameController>().decreasePlayerTotalLife(this.moreLife);
+        base.updatePlayerLife();
+        base.updatePlayerLifeBar();
     }
 
     public override int[] getIdSlot()

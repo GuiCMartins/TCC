@@ -4,9 +4,25 @@ using UnityEngine;
 
 public class UseItemChestPlate : UseItemBase
 {
-    public override void useItem(GameObject item)
+    //Serialized Fields
+    [Header("Stats configuration")]
+    [SerializeField]
+    private int moreLife = 70;
+
+    public override void useItem()
     {
-        Debug.Log("ChestPlate");
+        base.setGameController(GameObject.FindWithTag("GameController"));
+        base.getGameController().GetComponent<GameController>().increasePlayerTotalLife(this.moreLife);
+        base.updatePlayerLife();
+        base.updatePlayerLifeBar();
+    }
+
+    public override void unUseItem()
+    {
+        base.setGameController(GameObject.FindWithTag("GameController"));
+        base.getGameController().GetComponent<GameController>().decreasePlayerTotalLife(this.moreLife);
+        base.updatePlayerLife();
+        base.updatePlayerLifeBar();
     }
 
     public override int[] getIdSlot()

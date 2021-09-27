@@ -4,61 +4,61 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    //Non serialized fields
-    private int playerCoins = 0;
-    private int playerXp = 0;
-    [SerializeField]
-    private int playerCurrentLife = 0;
-    private int questId = 0;
-
     //Serialized fields
-    [Header("Base player life configuration")]
-    [SerializeField]
-    private int basePlayerLife;
-    [Header("Base player damage configuration")]
-    [SerializeField]
-    private int basePlayerDamage;
     [Header("Quests configuration")]
     [SerializeField]
     private List<QuestBase> quests = new List<QuestBase>();
 
+    //Non serialized fields
+    private GameObject player = null;
+    private int playerCoins = 0;
+    private int playerXp = 0;
+    [SerializeField]
+    private int playerCurrentLife = 0;
+    [SerializeField]
+    private int playerTotalLife = 0;
+    [SerializeField]
+    private int playerTotalDamage = 0;
+    private int questId = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-        this.playerCurrentLife = this.basePlayerLife;
+        this.player = GameObject.FindWithTag("Player");
 
-        DontDestroyOnLoad(this.gameObject);
+        updatePlayerCurrentLife();
+        updatePlayerTotalLife();
+        this.playerTotalDamage = this.player.GetComponent<PlayerStats>().getTotalDamage();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void setPlayerCurrentLife(int life)
     {
-        
+        this.player.GetComponent<PlayerStats>().setCurrentLife(life);
+    }
+
+    public void updatePlayerCurrentLife()
+    {
+        this.playerCurrentLife = this.player.GetComponent<PlayerStats>().getCurrentLife();
+    }
+
+    public void updatePlayerTotalLife()
+    {
+        this.playerTotalLife = this.player.GetComponent<PlayerStats>().getTotalLife();
+    }
+
+    public void increasePlayerTotalLife(int life)
+    {
+        this.player.GetComponent<PlayerStats>().increaseTotalLife(life);
+    }
+
+    public void decreasePlayerTotalLife(int life)
+    {
+        this.player.GetComponent<PlayerStats>().decreaseTotalLife(life);
     }
 
     public void setPlayerCoins(int valueCoin)
     {
         this.playerCoins += valueCoin;
-    }
-
-    public void setBasePlayerLife(int baseLife)
-    {
-        this.basePlayerLife = baseLife;
-    }
-
-    public void setBasePlayerDamage(int baseDamage)
-    {
-        this.basePlayerDamage = baseDamage;
-    }
-
-    public void setPlayerXp(int xp)
-    {
-        this.playerXp = xp;
-    }
-
-    public void setPlayerCurrentLife(int playerCurrentLife)
-    {
-        this.playerCurrentLife = playerCurrentLife;
     }
 
     public void setQuestId(int questId)
@@ -71,14 +71,14 @@ public class GameController : MonoBehaviour
         return this.playerCoins;
     }
 
-    public int getBasePlayerLife()
+    public int getPlayerTotalLife()
     {
-        return this.basePlayerLife;
+        return this.playerTotalLife;
     }
 
-    public int getBasePlayerDamage()
+    public int getPlayerTotalDamage()
     {
-        return this.basePlayerDamage;
+        return this.playerTotalDamage;
     }
 
     public int getPlayerXp()

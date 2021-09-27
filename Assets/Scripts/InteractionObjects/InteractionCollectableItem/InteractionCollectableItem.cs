@@ -23,11 +23,6 @@ public class InteractionCollectableItem : Interaction
         colectItem();
     }
 
-    public void useItem(GameObject item)
-    { 
-        GetComponent<UseItemBase>().useItem(item);
-    }
-
     private void colectItem()
     {
         if (Input.GetKeyDown(KeyCode.F))

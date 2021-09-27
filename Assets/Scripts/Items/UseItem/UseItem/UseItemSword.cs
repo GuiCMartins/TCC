@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class UseItemSword : UseItemBase
 {
-    public override void useItem(GameObject item)
+    public override void useItem()
     {
         Debug.Log("Sword");
+    }
+
+    public override void unUseItem()
+    {
+
     }
 
     public override int[] getIdSlot()

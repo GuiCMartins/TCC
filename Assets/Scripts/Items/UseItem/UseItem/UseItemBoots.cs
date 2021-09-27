@@ -3,11 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class UseItemBoots : UseItemBase
-{
-    
-    public override void useItem(GameObject item)
+{ 
+    //Serialized Fields
+    [Header("Stats configuration")]
+    [SerializeField]
+    private int moreLife = 40;
+
+    public override void useItem()
     {
-        Debug.Log("Boots");
+        base.setGameController(GameObject.FindWithTag("GameController"));
+        base.getGameController().GetComponent<GameController>().increasePlayerTotalLife(this.moreLife);
+        base.updatePlayerLife();
+        base.updatePlayerLifeBar();
+    }
+
+    public override void unUseItem()
+    {
+        base.setGameController(GameObject.FindWithTag("GameController"));
+        base.getGameController().GetComponent<GameController>().decreasePlayerTotalLife(this.moreLife);
+        base.updatePlayerLife();
+        base.updatePlayerLifeBar();
     }
 
     public override int[] getIdSlot()

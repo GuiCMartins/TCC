@@ -7,12 +7,9 @@ using UnityEngine.UI;
 public class HudController : MonoBehaviour
 {
     //Non serialized fields
-    private GameController gameController;
+    private GameObject gameController = null;
 
     //Serialized fields
-    [Header("Scrip PlayerStats configuration")]
-    [SerializeField]
-    private PlayerStats playerStats = null;
     [Header("HUD coin text configuration")]
     [SerializeField]
     private TextMeshProUGUI text = null;
@@ -23,30 +20,28 @@ public class HudController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.playerStats = FindObjectOfType(typeof(PlayerStats)) as PlayerStats;
-        this.gameController = FindObjectOfType(typeof(GameController)) as GameController;
+        this.gameController = GameObject.FindWithTag("GameController");
     }
 
     // Update is called once per frame
     void Update()
     {
         setCoinText();
-        setLifeBar();
     }
 
     private void setCoinText()
     {
-        string s = this.gameController.getPlayerCoins().ToString("N0");
+        string s = this.gameController.GetComponent<GameController>().getPlayerCoins().ToString("N0");
         this.text.text = s.Replace(",", ".");
     }
 
-    private void setLifeBar()
-    {
-        if(this.playerStats == null)
-        {
-            this.playerStats = FindObjectOfType(typeof(PlayerStats)) as PlayerStats;
-        }
+    public void setLifeBar()
+    { 
+        this.lifeBar.fillAmount = ((float)this.gameController.GetComponent<GameController>().getPlayerCurrentLife() / (float)this.gameController.GetComponent<GameController>().getPlayerTotalLife());
+    }
 
-        this.lifeBar.fillAmount = ((float)playerStats.getCurrentLife() / (float)playerStats.getTotalLife());
+    public float getLifeBarPercent()
+    {
+        return this.lifeBar.fillAmount;
     }
 }

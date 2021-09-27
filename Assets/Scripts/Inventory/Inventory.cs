@@ -61,6 +61,7 @@ public class Inventory : MonoBehaviour
                     removeItemOfInventoryAddInEquipment(item);
                     this.equipmentsInInventory[id] = item;
                     this.equipmentSlots.transform.GetChild(id).GetComponent<Slot>().addItem(item);
+                    item.GetComponent<UseItemBase>().useItem();
                     break;
                 }
             }

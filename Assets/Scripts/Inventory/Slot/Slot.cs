@@ -9,7 +9,6 @@ public class Slot : MonoBehaviour
     [Header("Id configuration")]
     [SerializeField]
     private int id = 0;
-    //Serialized fields
     [Header("Sprite default configuration")]
     [SerializeField]
     private Sprite spriteDefault = null;
@@ -61,6 +60,7 @@ public class Slot : MonoBehaviour
         {
             this.inventory.addItem(this.item);
             this.inventory.removeEquipmentInInventory(this.id);
+            this.item.GetComponent<UseItemBase>().unUseItem();
             removeItemSlot();
         }
     }
