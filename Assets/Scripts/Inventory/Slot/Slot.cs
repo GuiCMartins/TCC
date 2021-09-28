@@ -60,7 +60,7 @@ public class Slot : MonoBehaviour
         {
             this.inventory.addItem(this.item);
             this.inventory.removeEquipmentInInventory(this.id);
-            this.item.GetComponent<UseItemBase>().unUseItem();
+            this.inventory.unUseItem(this.item);
             removeItemSlot();
         }
     }
@@ -69,7 +69,14 @@ public class Slot : MonoBehaviour
     {
         if (this.item != null)
         {
-            this.inventory.addEquipments(this.item);
+            if (!this.item.GetComponent<UseItemBase>().isConsumable())
+            {
+                this.inventory.addEquipments(this.item);
+            }
+            else{
+                this.inventory.useItem(this.item);
+                this.inventory.unUseItem(this.item);
+            }
         }
     }
 

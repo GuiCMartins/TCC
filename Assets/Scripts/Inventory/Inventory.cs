@@ -53,19 +53,26 @@ public class Inventory : MonoBehaviour
 
     public void addEquipments(GameObject item)
     { 
-        if (!item.GetComponent<UseItemBase>().isConsumable())
-        {
-            foreach (int id in item.GetComponent<UseItemBase>().getIdSlot()){
-                if (this.equipmentsInInventory[id] == null)
-                {
-                    removeItemOfInventoryAddInEquipment(item);
-                    this.equipmentsInInventory[id] = item;
-                    this.equipmentSlots.transform.GetChild(id).GetComponent<Slot>().addItem(item);
-                    item.GetComponent<UseItemBase>().useItem();
-                    break;
-                }
+        foreach (int id in item.GetComponent<UseItemBase>().getIdSlot()){
+            if (this.equipmentsInInventory[id] == null)
+            {
+                 removeItemOfInventoryAddInEquipment(item);
+                 this.equipmentsInInventory[id] = item;
+                 this.equipmentSlots.transform.GetChild(id).GetComponent<Slot>().addItem(item);
+                 item.GetComponent<UseItemBase>().useItem();
+                 break;
             }
         }
+    }
+
+    public void useItem(GameObject item)
+    {
+        item.GetComponent<UseItemBase>().useItem();
+    }
+
+    public void unUseItem(GameObject item)
+    {
+        item.GetComponent<UseItemBase>().unUseItem();
     }
 
     public void removeItemInInventory(int id)

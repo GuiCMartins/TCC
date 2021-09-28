@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UseItemLifePotion : UseItemBase
+public class UseItemLifePotion : UseItemConsumable
 {
+    [Header("Life heal configuration")]
+    [SerializeField]
+    private int lifeHeal = 20;
+
     public override void useItem()
     {
-        Debug.Log("LifePotion");
+        base.useItemBase();
     }
 
     public override void unUseItem()
     {
-
+        base.unUseItemBase();
     }
 
     public override int[] getIdSlot()
