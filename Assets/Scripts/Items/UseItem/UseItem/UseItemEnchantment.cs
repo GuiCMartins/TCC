@@ -26,6 +26,7 @@ public abstract class UseItemEnchantment : UseItemBase
         increasePlayerMoreDamageStats();
         updatePlayerMoreLifeStats();
         updatePlayerMoreDamageStats();
+        calculatePlayerDamageStats();
         updatePlayerLifeStats();
         updatePlayerDamageStats();
     }
@@ -37,6 +38,7 @@ public abstract class UseItemEnchantment : UseItemBase
         decreasePlayerMoreDamageStats();
         updatePlayerMoreLifeStats();
         updatePlayerMoreDamageStats();
+        calculatePlayerDamageStats();
         updatePlayerLifeStats();
         updatePlayerDamageStats();
     }
@@ -44,6 +46,11 @@ public abstract class UseItemEnchantment : UseItemBase
     private void setGameController()
     {
         base.setGameController(GameObject.FindWithTag("GameController"));
+    }
+
+    private void calculatePlayerDamageStats()
+    {
+        base.getGameController().GetComponent<GameController>().calculatePlayerCriticalDamage();
     }
 
     private void increasePlayerMoreLifeStats()
@@ -85,6 +92,7 @@ public abstract class UseItemEnchantment : UseItemBase
     {
         base.getGameController().GetComponent<GameController>().updatePlayerDamageMin();
         base.getGameController().GetComponent<GameController>().updatePlayerDamageMax();
+        base.getGameController().GetComponent<GameController>().updatePlayerCriticalDamage();
         base.getGameController().GetComponent<GameController>().updatePlayerCriticalChance();
     }
 

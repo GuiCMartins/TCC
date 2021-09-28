@@ -12,8 +12,6 @@ public abstract class UseItemWeapon : UseItemBase
     private int damageMax = 40;
     [SerializeField]
     private int Criticalchance = 10;
-    [SerializeField]
-    private int criticalDamage = 50;
 
     public override abstract void useItem();
     public override abstract void unUseItem();
@@ -24,6 +22,7 @@ public abstract class UseItemWeapon : UseItemBase
     {
         setGameController();
         setPlayerDamageStats();
+        calculatePlayerDamageStats();
         updatePlayerDamageStats();
     }
 
@@ -31,6 +30,7 @@ public abstract class UseItemWeapon : UseItemBase
     {
         setGameController();
         setBasePlayerDamageStats();
+        calculatePlayerDamageStats();
         updatePlayerDamageStats();
     }
 
@@ -39,11 +39,15 @@ public abstract class UseItemWeapon : UseItemBase
         base.setGameController(GameObject.FindWithTag("GameController"));
     }
 
+    private void calculatePlayerDamageStats()
+    {
+        base.getGameController().GetComponent<GameController>().calculatePlayerCriticalDamage();
+    }
+
     private void setPlayerDamageStats()
     {
         base.getGameController().GetComponent<GameController>().setPlayerDamageMin(this.damageMin);
         base.getGameController().GetComponent<GameController>().setPlayerDamageMax(this.damageMax);
-        base.getGameController().GetComponent<GameController>().setPlayerCriticalDamage(this.criticalDamage);
         base.getGameController().GetComponent<GameController>().setPlayerCriticalchance(this.Criticalchance);
     }
 
@@ -51,7 +55,6 @@ public abstract class UseItemWeapon : UseItemBase
     {
         base.getGameController().GetComponent<GameController>().setBasePlayerDamageMin();
         base.getGameController().GetComponent<GameController>().setBasePlayerDamageMax();
-        base.getGameController().GetComponent<GameController>().setBasePlayerCriticalDamage();
         base.getGameController().GetComponent<GameController>().setBasePlayerCriticalchance();
     }
 

@@ -15,8 +15,6 @@ public class PlayerStats : MonoBehaviour
     private int damageMinBase = 10;
     [SerializeField]
     private int criticalChanceBase = 0;
-    [SerializeField]
-    private int criticalDamageBase = 0;
 
     //Non serialized fields
     private GameObject gameController = null;
@@ -36,6 +34,7 @@ public class PlayerStats : MonoBehaviour
         this.gameController = GameObject.FindWithTag("GameController");
 
         this.currentLife = this.totalLife;
+        this.currentCriticalDamage = this.currentDamageMax + (int)(this.currentDamageMax * 0.2);
     }
 
     //Function
@@ -45,6 +44,13 @@ public class PlayerStats : MonoBehaviour
         this.currentLife -= damage;
         this.gameController.GetComponent<GameController>().updatePlayerCurrentLife();
         this.gameController.GetComponent<HudController>().setLifeBar();
+    }
+
+    //Calculate
+
+    public void calculateCriticalDamage()
+    {
+        this.currentCriticalDamage = getDamageMax() + (int)(getDamageMax() * 0.2);
     }
 
     //Increase
@@ -129,11 +135,6 @@ public class PlayerStats : MonoBehaviour
         this.currentDamageMax = damageMax;
     }
 
-    public void setCriticalDamage(int criticalDamage)
-    {
-        this.currentCriticalDamage = criticalDamage;
-    }
-
     public void setCriticalchance(int criticalChance)
     {
         this.currentCriticalChance = criticalChance;
@@ -147,11 +148,6 @@ public class PlayerStats : MonoBehaviour
     public void setBaseDamageMax()
     {
         this.currentDamageMax = this.damageMaxBase;
-    }
-
-    public void setBaseCriticalDamage()
-    {
-        this.currentCriticalDamage = this.criticalDamageBase;
     }
 
     public void setBaseCriticalchance()

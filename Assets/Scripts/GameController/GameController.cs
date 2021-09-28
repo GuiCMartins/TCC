@@ -40,6 +40,13 @@ public class GameController : MonoBehaviour
         updatePlayerCriticalChance();
     }
 
+    //Calculate
+
+    public void calculatePlayerCriticalDamage()
+    {
+        this.player.GetComponent<PlayerStats>().calculateCriticalDamage();
+    }
+
     //Update
 
     public void updatePlayerCurrentLife()
@@ -179,11 +186,6 @@ public class GameController : MonoBehaviour
         this.player.GetComponent<PlayerStats>().setDamageMax(damageMax);
     }
 
-    public void setPlayerCriticalDamage(int criticalDamage)
-    {
-        this.player.GetComponent<PlayerStats>().setCriticalDamage(criticalDamage);
-    }
-
     public void setPlayerCriticalchance(int criticalchance)
     {
         this.player.GetComponent<PlayerStats>().setCriticalchance(criticalchance);
@@ -197,11 +199,6 @@ public class GameController : MonoBehaviour
     public void setBasePlayerDamageMax()
     {
         this.player.GetComponent<PlayerStats>().setBaseDamageMax();
-    }
-
-    public void setBasePlayerCriticalDamage()
-    {
-        this.player.GetComponent<PlayerStats>().setBaseCriticalDamage();
     }
 
     public void setBasePlayerCriticalchance()
