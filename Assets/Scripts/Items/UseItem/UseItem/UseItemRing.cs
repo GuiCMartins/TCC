@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UseItemRing : UseItemBase
+public class UseItemRing : UseItemEnchantment
 {
     public override void useItem()
     {
-       
+        base.useItemBase();
     }
 
     public override void unUseItem()
     {
-
+        base.unUseItemBase();
     }
 
     public override int[] getIdSlot()

@@ -49,7 +49,5 @@ public abstract class UseItemArmor : UseItemBase
         base.getGameController().GetComponent<GameController>().setPlayerCurrentLife((int)(base.getGameController().GetComponent<GameController>().getPlayerTotalLife() * base.getGameController().GetComponent<HudController>().getLifeBarPercent()));
         base.getGameController().GetComponent<GameController>().updatePlayerCurrentLife();
         base.getGameController().GetComponent<HudController>().setLifeBar();
-        //base.updatePlayerLife();
-        //base.updatePlayerLifeBar();
     }
 }

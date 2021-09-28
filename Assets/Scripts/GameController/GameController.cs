@@ -19,6 +19,8 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private int playerTotalLife = 0;
     [SerializeField]
+    private int playerMoreLife = 0;
+    [SerializeField]
     private int playerDamageMax = 0;
     [SerializeField]
     private int playerDamageMin = 0;
@@ -26,6 +28,10 @@ public class GameController : MonoBehaviour
     private int playerCriticalChance = 0;
     [SerializeField]
     private int playerCriticalDamage = 0;
+    [SerializeField]
+    private int playerMoreDamage = 0;
+    [SerializeField]
+    private int playerMoreCriticalChance = 0;
     private int questId = 0;
 
     // Start is called before the first frame update
@@ -53,6 +59,11 @@ public class GameController : MonoBehaviour
         this.playerTotalLife = this.player.GetComponent<PlayerStats>().getTotalLife();
     }
 
+    public void updatePlayerMoreLife()
+    {
+        this.playerMoreLife = this.player.GetComponent<PlayerStats>().getMoreLife();
+    }
+
     public void updatePlayerDamageMax()
     {
         this.playerDamageMax = this.player.GetComponent<PlayerStats>().getDamageMax();
@@ -61,6 +72,11 @@ public class GameController : MonoBehaviour
     public void updatePlayerDamageMin()
     {
         this.playerDamageMin = this.player.GetComponent<PlayerStats>().getDamageMin();
+    }
+
+    public void updatePlayerMoreDamage()
+    {
+        this.playerMoreDamage = this.player.GetComponent<PlayerStats>().getMoreDamage();
     }
 
     public void updatePlayerCriticalDamage()
@@ -73,6 +89,11 @@ public class GameController : MonoBehaviour
         this.playerCriticalChance = this.player.GetComponent<PlayerStats>().getCriticalChance();
     }
 
+    public void updatePlayerMoreCriticalChance()
+    {
+        this.playerMoreCriticalChance = this.player.GetComponent<PlayerStats>().getMoreCriticalChance();
+    }
+
     //Increase
 
     public void increasePlayerTotalLife(int life)
@@ -80,11 +101,51 @@ public class GameController : MonoBehaviour
         this.player.GetComponent<PlayerStats>().increaseTotalLife(life);
     }
 
+    public void increasePlayerMoreLife(int life)
+    {
+        this.player.GetComponent<PlayerStats>().increaseMoreLife(life);
+    }
+
+    public void increasePlayerMoreDamage(int damage)
+    {
+        this.player.GetComponent<PlayerStats>().increaseMoreDamage(damage);
+    }
+
+    public void increasePlayerDamage(int damage)
+    {
+        this.player.GetComponent<PlayerStats>().increaseDamage(damage);
+    }
+
+    public void increasePlayerMoreCriticalChance(int critcalDamage)
+    {
+        this.player.GetComponent<PlayerStats>().increaseMoreCriticalChance(critcalDamage);
+    }
+
+    public void increasePlayerCriticalChance(int critcalDamage)
+    {
+        this.player.GetComponent<PlayerStats>().increaseCriticalChance(critcalDamage);
+    }
+
     //Decrease
 
     public void decreasePlayerTotalLife(int life)
     {
         this.player.GetComponent<PlayerStats>().decreaseTotalLife(life);
+    }
+
+    public void decreasePlayerMoreLife(int life)
+    {
+        this.player.GetComponent<PlayerStats>().decreaseMoreLife(life);
+    }
+
+    public void decreasePlayerMoreDamage(int damage)
+    {
+        this.player.GetComponent<PlayerStats>().decreaseMoreDamage(damage);
+    }
+
+    public void decreasePlayerMoreCriticalChance(int critcalDamage)
+    {
+        this.player.GetComponent<PlayerStats>().decreaseMoreCriticalChance(critcalDamage);
     }
 
     //Set

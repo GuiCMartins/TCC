@@ -25,6 +25,9 @@ public class PlayerStats : MonoBehaviour
     private int currentDamageMin = 10;
     private int currentCriticalChance = 0;
     private int currentCriticalDamage = 0;
+    private int moreLife = 0;
+    private int moreDamage = 0;
+    private int moreCriticalChance = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -50,11 +53,52 @@ public class PlayerStats : MonoBehaviour
         this.totalLife = this.totalLife + life;
     }
 
+    public void increaseMoreLife(int life)
+    {
+        this.moreLife = this.moreLife + life;
+    }
+
+    public void increaseMoreDamage(int damage)
+    {
+        this.moreDamage = this.moreDamage + damage;
+    }
+
+    public void increaseDamage(int damage)
+    {
+        setDamageMin(damage);
+        setDamageMax(damage);
+    }
+
+    public void increaseMoreCriticalChance(int criticalChance)
+    {
+        this.moreCriticalChance = this.moreCriticalChance + criticalChance;
+    }
+
+    public void increaseCriticalChance(int criticalChance)
+    {
+        this.currentCriticalChance = this.currentCriticalChance + criticalChance;
+    }
+
     //Decrease
 
     public void decreaseTotalLife(int life)
     {
         this.totalLife = this.totalLife - life;
+    }
+
+    public void decreaseMoreLife(int life)
+    {
+        this.moreLife = this.moreLife - life;
+    }
+
+    public void decreaseMoreDamage(int damage)
+    {
+        this.moreDamage = this.moreDamage - damage;
+    }
+
+    public void decreaseMoreCriticalChance(int criticalChance)
+    {
+        this.moreCriticalChance = this.moreCriticalChance - criticalChance;
     }
 
     //Set
@@ -113,7 +157,7 @@ public class PlayerStats : MonoBehaviour
 
     public int getTotalLife()
     {
-        return this.totalLife;
+        return this.totalLife + this.moreLife;
     }
 
     public int getCurrentLife()
@@ -121,14 +165,24 @@ public class PlayerStats : MonoBehaviour
         return this.currentLife;
     }
 
+    public int getMoreLife()
+    {
+        return this.moreLife;
+    }
+
     public int getDamageMax()
     {
-        return this.currentDamageMax;
+        return this.currentDamageMax + this.moreDamage;
     }
 
     public int getDamageMin()
     {
-        return this.currentDamageMin;
+        return this.currentDamageMin + this.moreDamage;
+    }
+
+    public int getMoreDamage()
+    {
+        return this.moreDamage;
     }
 
     public int getCriticalDamage()
@@ -138,6 +192,11 @@ public class PlayerStats : MonoBehaviour
 
     public int getCriticalChance()
     {
-        return this.currentCriticalChance;
+        return this.currentCriticalChance + this.moreCriticalChance;
+    }
+
+    public int getMoreCriticalChance()
+    {
+        return this.moreCriticalChance;
     }
 }
