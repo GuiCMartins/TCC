@@ -11,6 +11,8 @@ TagManager:
   - Monster
   - HelmetIcon
   - Inventory
+  - StatsDamageText
+  - StatsLifeText
   layers:
   - Default
   - TransparentFX

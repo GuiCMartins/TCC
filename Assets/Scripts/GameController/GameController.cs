@@ -10,27 +10,20 @@ public class GameController : MonoBehaviour
     private List<QuestBase> quests = new List<QuestBase>();
 
     //Non serialized fields
+    //Obj
     private System.Random randNum = new System.Random();
     private GameObject player = null;
+    //playerStats
     private int playerCoins = 0;
     private int playerXp = 0;
-    [SerializeField]
     private int playerCurrentLife = 0;
-    [SerializeField]
     private int playerTotalLife = 0;
-    [SerializeField]
     private int playerMoreLife = 0;
-    [SerializeField]
     private int playerDamageMax = 0;
-    [SerializeField]
     private int playerDamageMin = 0;
-    [SerializeField]
     private int playerCriticalChance = 0;
-    [SerializeField]
     private int playerCriticalDamage = 0;
-    [SerializeField]
     private int playerMoreDamage = 0;
-    [SerializeField]
     private int playerMoreCriticalChance = 0;
     private int questId = 0;
 
@@ -52,11 +45,13 @@ public class GameController : MonoBehaviour
     public void updatePlayerCurrentLife()
     {
         this.playerCurrentLife = this.player.GetComponent<PlayerStats>().getCurrentLife();
+        this.gameObject.GetComponent<HudController>().setCurrentLifeText();
     }
 
     public void updatePlayerTotalLife()
     {
         this.playerTotalLife = this.player.GetComponent<PlayerStats>().getTotalLife();
+        this.gameObject.GetComponent<HudController>().setTotalLifeText();
     }
 
     public void updatePlayerMoreLife()
@@ -67,11 +62,13 @@ public class GameController : MonoBehaviour
     public void updatePlayerDamageMax()
     {
         this.playerDamageMax = this.player.GetComponent<PlayerStats>().getDamageMax();
+        this.gameObject.GetComponent<HudController>().setDamageMaxText();
     }
 
     public void updatePlayerDamageMin()
     {
         this.playerDamageMin = this.player.GetComponent<PlayerStats>().getDamageMin();
+        this.gameObject.GetComponent<HudController>().setDamageMinText();
     }
 
     public void updatePlayerMoreDamage()
@@ -82,11 +79,13 @@ public class GameController : MonoBehaviour
     public void updatePlayerCriticalDamage()
     {
         this.playerCriticalDamage = this.player.GetComponent<PlayerStats>().getCriticalDamage();
+        this.gameObject.GetComponent<HudController>().setCriticalDamageText();
     }
 
     public void updatePlayerCriticalChance()
     {
         this.playerCriticalChance = this.player.GetComponent<PlayerStats>().getCriticalChance();
+        this.gameObject.GetComponent<HudController>().setCriticalChanceText();
     }
 
     public void updatePlayerMoreCriticalChance()
@@ -215,6 +214,16 @@ public class GameController : MonoBehaviour
     public int getPlayerDamageMin()
     {
         return this.playerDamageMin;
+    }
+
+    public int getPlayerCriticalDamage()
+    {
+        return this.playerCriticalDamage;
+    }
+
+    public int getPlayerCriticalChance()
+    {
+        return this.playerCriticalChance;
     }
 
     public int getPlayerCoins()
