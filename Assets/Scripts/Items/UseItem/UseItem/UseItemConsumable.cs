@@ -8,6 +8,7 @@ public abstract class UseItemConsumable : UseItemBase
     public override abstract void unUseItem();
     public override abstract int[] getIdSlot();
     public override abstract bool isConsumable();
+    public abstract bool isPlayerSpecificStatsNotFull();
 
     public void useItemBase()
     {
@@ -19,7 +20,12 @@ public abstract class UseItemConsumable : UseItemBase
         destroyConsumable();
     }
 
-    private void setGameController()
+    public GameObject getGameController()
+    {
+        return base.getGameController();
+    }
+
+    public void setGameController()
     {
         base.setGameController(GameObject.FindWithTag("GameController"));
     }

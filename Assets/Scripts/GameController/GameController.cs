@@ -100,6 +100,11 @@ public class GameController : MonoBehaviour
         this.player.GetComponent<PlayerStats>().increaseTotalLife(life);
     }
 
+    public void increasePlayerCurrentLife(int life)
+    {
+        this.player.GetComponent<PlayerStats>().increaseCurrentLife(life);
+    }
+
     public void increasePlayerMoreLife(int life)
     {
         this.player.GetComponent<PlayerStats>().increaseMoreLife(life);

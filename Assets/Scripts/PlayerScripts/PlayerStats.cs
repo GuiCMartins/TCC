@@ -20,6 +20,7 @@ public class PlayerStats : MonoBehaviour
 
     //Non serialized fields
     private GameObject gameController = null;
+    [SerializeField]
     private int currentLife = 50;
     private int currentDamageMax = 10;
     private int currentDamageMin = 10;
@@ -51,6 +52,11 @@ public class PlayerStats : MonoBehaviour
     public void increaseTotalLife(int life)
     {
         this.totalLife = this.totalLife + life;
+    }
+
+    public void increaseCurrentLife(int life)
+    {
+        this.currentLife = this.currentLife + life;
     }
 
     public void increaseMoreLife(int life)

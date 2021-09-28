@@ -74,8 +74,12 @@ public class Slot : MonoBehaviour
                 this.inventory.addEquipments(this.item);
             }
             else{
-                this.inventory.useItem(this.item);
-                this.inventory.unUseItem(this.item);
+                if (this.item.GetComponent<UseItemConsumable>().isPlayerSpecificStatsNotFull())
+                {
+                    this.inventory.useItem(this.item);
+                    this.inventory.unUseItem(this.item);
+                    removeItemInInventory();
+                }
             }
         }
     }
