@@ -1,0 +1,326 @@
+fileFormatVersion: 2
+guid: 412a8036d56ea3e48910b939d00909c2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4974203285345366419
+    second: animatedcastledoors_0
+  - first:
+      213: -2418222660855251447
+    second: animatedcastledoors_1
+  - first:
+      213: -6492731337352432266
+    second: animatedcastledoors_2
+  - first:
+      213: -7115451588128110139
+    second: animatedcastledoors_3
+  - first:
+      213: -863519672811402105
+    second: animatedcastledoors_4
+  - first:
+      213: -6336934705273174902
+    second: animatedcastledoors_5
+  - first:
+      213: 4442171997788355834
+    second: animatedcastledoors_6
+  - first:
+      213: 1373571456394977241
+    second: animatedcastledoors_7
+  - first:
+      213: 4645460011430139521
+    second: animatedcastledoors_8
+  - first:
+      213: -4791394263590173794
+    second: animatedcastledoors_9
+  - first:
+      213: -524262222911850597
+    second: animatedcastledoors_10
+  - first:
+      213: -8501662426415001222
+    second: animatedcastledoors_11
+  - first:
+      213: 3537447109373857068
+    second: animatedcastledoors_12
+  - first:
+      213: -4592616442853663865
+    second: animatedcastledoors_13
+  - first:
+      213: -7536391134588874900
+    second: animatedcastledoors_14
+  - first:
+      213: 1462604779195904834
+    second: animatedcastledoors_15
+  - first:
+      213: 5573431684249095051
+    second: animatedcastledoors_16
+  - first:
+      213: 2394831699408717403
+    second: animatedcastledoors_17
+  - first:
+      213: 4874792957845805192
+    second: animatedcastledoors_18
+  - first:
+      213: 7040529516516967026
+    second: animatedcastledoors_19
+  - first:
+      213: 4032848066684603832
+    second: animatedcastledoors_20
+  - first:
+      213: -4129031028021786742
+    second: animatedcastledoors_21
+  - first:
+      213: -3687966556059172766
+    second: animatedcastledoors_22
+  - first:
+      213: 5689595918429802798
+    second: animatedcastledoors_23
+  - first:
+      213: -5370869060380144301
+    second: animatedcastledoors_24
+  - first:
+      213: -6449759533587608931
+    second: animatedcastledoors_25
+  - first:
+      213: -4481439261909530112
+    second: animatedcastledoors_26
+  - first:
+      213: 900165460759460120
+    second: animatedcastledoors_27
+  - first:
+      213: -9219031393494259041
+    second: animatedcastledoors_28
+  - first:
+      213: 5647280290842452452
+    second: animatedcastledoors_29
+  - first:
+      213: -7813816011932312091
+    second: animatedcastledoors_30
+  - first:
+      213: 8807741006622548025
+    second: animatedcastledoors_31
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: animatedcastledoors_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e8868677418fab0800000000000000
+      internalID: -4974203285345366419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedcastledoors_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90e3cef5d4fb07ed0800000000000000
+      internalID: -2418222660855251447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedcastledoors_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 675bf07af3f25e5a0800000000000000
+      internalID: -6492731337352432266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedcastledoors_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c98229da76d04d90800000000000000
+      internalID: -7115451588128110139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedcastledoors_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78cc385ce692404f0800000000000000
+      internalID: -863519672811402105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedcastledoors_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a840957c57fae08a0800000000000000
+      internalID: -6336934705273174902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
