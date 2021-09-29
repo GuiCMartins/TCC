@@ -5,7 +5,6 @@ using UnityEngine;
 public class InteractionDoor : Interaction
 {
     //Non serialized Fields
-    [SerializeField]
     private List<bool> clicks = new List<bool>();
 
     public override void interaction()
