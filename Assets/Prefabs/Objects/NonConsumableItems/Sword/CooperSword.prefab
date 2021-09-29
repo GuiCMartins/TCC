@@ -130,8 +130,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageMin: 20
   damageMax: 40
-  Criticalchance: 10
-  criticalDamage: 50
+  criticalchance: 10
+  criticalDamage: 10
 --- !u!1 &1323075125383400082
 GameObject:
   m_ObjectHideFlags: 0

@@ -313,5 +313,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageMin: 55
   damageMax: 70
-  Criticalchance: 15
-  criticalDamage: 80
+  criticalchance: 10
+  criticalDamage: 15

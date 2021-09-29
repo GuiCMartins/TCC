@@ -15,6 +15,8 @@ public class PlayerStats : MonoBehaviour
     private int damageMinBase = 10;
     [SerializeField]
     private int criticalChanceBase = 0;
+    [SerializeField]
+    private float criticalDamagePercentBase = 0f;
 
     //Non serialized fields
     private GameObject gameController = null;
@@ -27,6 +29,7 @@ public class PlayerStats : MonoBehaviour
     private int moreLife = 0;
     private int moreDamage = 0;
     private int moreCriticalChance = 0;
+    private float criticalDamagePercent = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +37,7 @@ public class PlayerStats : MonoBehaviour
         this.gameController = GameObject.FindWithTag("GameController");
 
         this.currentLife = this.totalLife;
-        this.currentCriticalDamage = this.currentDamageMax + (int)(this.currentDamageMax * 0.2);
+        this.currentCriticalDamage = this.currentDamageMax + (int)(this.currentDamageMax * this.criticalDamagePercent);
     }
 
     //Function
@@ -50,7 +53,7 @@ public class PlayerStats : MonoBehaviour
 
     public void calculateCriticalDamage()
     {
-        this.currentCriticalDamage = getDamageMax() + (int)(getDamageMax() * 0.2);
+        this.currentCriticalDamage = getDamageMax() + (int)(getDamageMax() * this.criticalDamagePercent);
     }
 
     //Increase
@@ -135,6 +138,11 @@ public class PlayerStats : MonoBehaviour
         this.currentDamageMax = damageMax;
     }
 
+    public void setCriticalDamagePercent(float criticalDamagePercent)
+    {
+        this.criticalDamagePercent = criticalDamagePercent;
+    }
+
     public void setCriticalchance(int criticalChance)
     {
         this.currentCriticalChance = criticalChance;
@@ -153,6 +161,11 @@ public class PlayerStats : MonoBehaviour
     public void setBaseCriticalchance()
     {
         this.currentCriticalChance = this.criticalChanceBase;
+    }
+
+    public void setBaseCriticalDamagePercent()
+    {
+        this.criticalDamagePercent = this.criticalDamagePercentBase;
     }
 
     //Get

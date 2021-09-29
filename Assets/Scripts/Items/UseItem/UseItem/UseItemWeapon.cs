@@ -11,7 +11,9 @@ public abstract class UseItemWeapon : UseItemBase
     [SerializeField]
     private int damageMax = 40;
     [SerializeField]
-    private int Criticalchance = 10;
+    private int criticalchance = 10;
+    [SerializeField]
+    private int criticalDamage = 15;
 
     public override abstract void useItem();
     public override abstract void unUseItem();
@@ -48,13 +50,15 @@ public abstract class UseItemWeapon : UseItemBase
     {
         base.getGameController().GetComponent<GameController>().setPlayerDamageMin(this.damageMin);
         base.getGameController().GetComponent<GameController>().setPlayerDamageMax(this.damageMax);
-        base.getGameController().GetComponent<GameController>().setPlayerCriticalchance(this.Criticalchance);
+        base.getGameController().GetComponent<GameController>().setPlayerCriticalDamagePercent(((float)criticalDamage / (float)100));
+        base.getGameController().GetComponent<GameController>().setPlayerCriticalchance(this.criticalchance);
     }
 
     private void setBasePlayerDamageStats()
     {
         base.getGameController().GetComponent<GameController>().setBasePlayerDamageMin();
         base.getGameController().GetComponent<GameController>().setBasePlayerDamageMax();
+        base.getGameController().GetComponent<GameController>().setBasePlayerCriticalDamagePercent();
         base.getGameController().GetComponent<GameController>().setBasePlayerCriticalchance();
     }
 

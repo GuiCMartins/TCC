@@ -191,6 +191,11 @@ public class GameController : MonoBehaviour
         this.player.GetComponent<PlayerStats>().setCriticalchance(criticalchance);
     }
 
+    public void setPlayerCriticalDamagePercent(float criticalDamagePercent)
+    {
+        this.player.GetComponent<PlayerStats>().setCriticalDamagePercent(criticalDamagePercent);
+    }
+
     public void setBasePlayerDamageMin()
     {
         this.player.GetComponent<PlayerStats>().setBaseDamageMin();
@@ -204,6 +209,11 @@ public class GameController : MonoBehaviour
     public void setBasePlayerCriticalchance()
     {
         this.player.GetComponent<PlayerStats>().setBaseCriticalchance();
+    }
+
+    public void setBasePlayerCriticalDamagePercent()
+    {
+        this.player.GetComponent<PlayerStats>().setBaseCriticalDamagePercent();
     }
 
     //Get
