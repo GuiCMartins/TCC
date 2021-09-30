@@ -35,7 +35,7 @@ public class InteractionDoor : Interaction
     IEnumerator click()
     {
         this.clicks.Add(true);
-        yield return new WaitForSeconds(.47f);
+        yield return new WaitForSeconds(.6f);
         this.clicks.RemoveAt(0);
     }
 }

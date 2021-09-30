@@ -12,6 +12,6 @@ public class lifeBarController : MonoBehaviour
 
     public void setCurrentLife(float percentualLife)
     {
-        this.gameObject.transform.GetChild(0).gameObject.transform.localScale = new Vector3(percentualLife, this.gameObject.transform.localScale.y, 0);
+        this.gameObject.transform.GetChild(0).gameObject.transform.localScale = new Vector3(percentualLife, this.gameObject.transform.GetChild(0).gameObject.transform.localScale.y, 0);
     }
 }
