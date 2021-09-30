@@ -229,7 +229,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalLife: 100
-  totalDamage: 15
+  damageMaxBase: 10
+  damageMinBase: 10
+  criticalChanceBase: 0
+  criticalDamagePercentBase: 0
+  currentLife: 50
 --- !u!114 &5095381094109191279
 MonoBehaviour:
   m_ObjectHideFlags: 0
