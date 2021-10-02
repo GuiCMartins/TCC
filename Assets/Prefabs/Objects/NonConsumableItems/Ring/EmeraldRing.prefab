@@ -196,6 +196,7 @@ GameObject:
   - component: {fileID: 4966731785110316480}
   - component: {fileID: 4966731785110316483}
   - component: {fileID: 1512969813056527423}
+  - component: {fileID: 7033019894622402115}
   m_Layer: 0
   m_Name: EmeraldRing
   m_TagString: InteractionObj
@@ -314,3 +315,23 @@ MonoBehaviour:
   moreLife: 0
   moreDamage: 0
   moreCriticalChance: 15
+--- !u!114 &7033019894622402115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5888107785196171118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ec90a72b0b06e438800842c169b88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Designis
+  description: Teste
+  moreLife: 0
+  moreDamage: 0
+  damage: 0
+  moreCriticalDamage: 0
+  moreCriticalChance: 15%
+  heal: 0

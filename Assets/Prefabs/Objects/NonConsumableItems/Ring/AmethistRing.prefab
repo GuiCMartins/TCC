@@ -196,6 +196,7 @@ GameObject:
   - component: {fileID: 7001229683905396941}
   - component: {fileID: 7001229683905396942}
   - component: {fileID: -6373234781621552594}
+  - component: {fileID: 980120048485730319}
   m_Layer: 0
   m_Name: AmethistRing
   m_TagString: InteractionObj
@@ -314,3 +315,23 @@ MonoBehaviour:
   moreLife: 0
   moreDamage: 10
   moreCriticalChance: 5
+--- !u!114 &980120048485730319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8391050145414384227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ec90a72b0b06e438800842c169b88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Gerenciatus
+  description: Teste
+  moreLife: 0
+  moreDamage: 10
+  damage: 0
+  moreCriticalDamage: 0
+  moreCriticalChance: 5%
+  heal: 0

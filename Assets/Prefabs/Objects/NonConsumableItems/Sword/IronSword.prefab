@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6102851188734938180}
   - component: {fileID: 6102851188734938183}
   - component: {fileID: 3130208027247736034}
+  - component: {fileID: 7104132148882941335}
   m_Layer: 0
   m_Name: IronSword
   m_TagString: InteractionObj
@@ -132,6 +133,26 @@ MonoBehaviour:
   damageMax: 60
   criticalchance: 10
   criticalDamage: 35
+--- !u!114 &7104132148882941335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4749622198122956522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ec90a72b0b06e438800842c169b88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 'Refactus '
+  description: Teste
+  moreLife: 0
+  moreDamage: 0
+  damage: 35-60
+  moreCriticalDamage: 35%
+  moreCriticalChance: 25%
+  heal: 0
 --- !u!1 &6102851187474824672
 GameObject:
   m_ObjectHideFlags: 0

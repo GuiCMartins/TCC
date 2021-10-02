@@ -31,4 +31,9 @@ public class BuyItemSlot : MonoBehaviour
             this.gameController.transform.GetChild(1).GetComponent<Inventory>().addItem(newItem);
         }
     }
+
+    public GameObject getItem()
+    {
+        return this.item;
+    }
 }

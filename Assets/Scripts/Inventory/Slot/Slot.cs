@@ -84,6 +84,11 @@ public class Slot : MonoBehaviour
         }
     }
 
+    public GameObject getItemInInventory()
+    {
+        return this.inventory.getItemInInventory(getId());
+    }
+
     public int getId()
     {
         return this.id;

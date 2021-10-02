@@ -196,6 +196,7 @@ GameObject:
   - component: {fileID: 178201413915807698}
   - component: {fileID: 178201413915807697}
   - component: {fileID: -5402824639350130641}
+  - component: {fileID: 7286313198756282087}
   m_Layer: 0
   m_Name: LargeLifePotion
   m_TagString: InteractionObj
@@ -312,3 +313,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeHeal: 50
+--- !u!114 &7286313198756282087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667101339930101116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ec90a72b0b06e438800842c169b88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: "Po\xE7\xE3o de vida grande"
+  description: '-'
+  moreLife: 0
+  moreDamage: 0
+  damage: 0
+  moreCriticalDamage: 0
+  moreCriticalChance: 0
+  heal: 50%
