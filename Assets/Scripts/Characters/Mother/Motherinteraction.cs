@@ -13,8 +13,8 @@ public class Motherinteraction : Interaction
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            this.initialQuest.setIsTalkMom();
-            this.initialQuest.talkToMom();
+            //this.initialQuest.setIsTalkMom();
+            //this.initialQuest.talkToMom();
         }
     }
 }

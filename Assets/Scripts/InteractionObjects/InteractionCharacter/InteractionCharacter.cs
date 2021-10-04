@@ -9,18 +9,6 @@ public class InteractionCharacter : Interaction
     [SerializeField]
     private InitialQuest initialQuest = null;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public override void interaction()
     {
         if (Input.GetKeyDown(KeyCode.F)) {
@@ -30,31 +18,9 @@ public class InteractionCharacter : Interaction
 
     private void firstQuest()
     {
-        if (!this.initialQuest.getIsOpened())
+        if (!this.initialQuest.getIsCompleted())
         {
-            this.initialQuest.startDialog();
-        }
-        else
-        {
-            if (this.initialQuest.getIsFightMonster())
-            {
-                if (!this.initialQuest.getAceptToTalkMom())
-                {
-                    this.initialQuest.startSecondDialog();
-                } 
-                else if (this.initialQuest.getIsTalkMom())
-                {
-                    Debug.Log("TUTORIAL");
-                }
-                else
-                {
-                    this.initialQuest.notTalkToMom();
-                }
-            }
-            else
-            {
-                this.initialQuest.startOnGoingQuestDialog();
-            }
+            this.initialQuest.executeCurrentDialog();
         }
     }
 }

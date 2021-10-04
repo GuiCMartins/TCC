@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (collider.tag == "TESTE")
         {
-            this.initialQuest.setIsFightMonster();
+            this.initialQuest.setCurrentDialogId(1);
         }
     }
 

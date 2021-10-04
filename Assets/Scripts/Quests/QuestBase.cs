@@ -11,23 +11,17 @@ public abstract class QuestBase : MonoBehaviour
     private string[] dialog = null;
     [Header("Flowchart configuration")]
     [SerializeField]
-    private Flowchart[] fCs = null;
+    private Flowchart fC = null;
     [Header("Game Controller configuration")]
     [SerializeField]
     private GameController gameController = null;
 
     //Non serialized fields
     private bool isCompleted = false;
-    private bool isOpened = false;
 
     public void setIsCompleted()
     {
         this.isCompleted = true;
-    }
-
-    public void setIsOpened()
-    {
-        this.isOpened = true;
     }
 
     public bool getIsCompleted()
@@ -35,19 +29,14 @@ public abstract class QuestBase : MonoBehaviour
         return this.isCompleted;
     }
 
-    public bool getIsOpened()
-    {
-        return this.isOpened;
-    }
-
     public string[] getDialog()
     {
         return this.dialog;
     }
 
-    public Flowchart[] getFC()
+    public Flowchart getFC()
     {
-        return this.fCs;
+        return this.fC;
     }
 
     public GameController getGameController()
