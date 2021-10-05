@@ -51,12 +51,4 @@ public class TutorialQuest : QuestBase
             this.isOpenBestiary = true;
         }
     }
-
-    private void verifyIsOpenBoth()
-    {
-        if (this.isOpenBestiary && this.isOpenInventory)
-        {
-
-        }
-    }
 }
