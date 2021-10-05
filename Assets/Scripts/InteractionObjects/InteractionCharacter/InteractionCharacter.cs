@@ -5,9 +5,9 @@ using UnityEngine;
 public class InteractionCharacter : Interaction
 {
     //Serialized fields
-    [Header("Game Controller configuration")]
+    [Header("Quest configuration")]
     [SerializeField]
-    private InitialQuest initialQuest = null;
+    private QuestBase quest = null;
 
     public override void interaction()
     {
@@ -18,9 +18,9 @@ public class InteractionCharacter : Interaction
 
     private void firstQuest()
     {
-        if (!this.initialQuest.getIsCompleted())
+        if (!this.quest.getIsCompleted())
         {
-            this.initialQuest.executeCurrentDialog();
+            this.quest.executeCurrentDialog();
         }
     }
 }

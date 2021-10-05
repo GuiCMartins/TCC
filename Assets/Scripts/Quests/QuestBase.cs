@@ -12,9 +12,8 @@ public abstract class QuestBase : MonoBehaviour
     [Header("Flowchart configuration")]
     [SerializeField]
     private Flowchart fC = null;
-    [Header("Game Controller configuration")]
     [SerializeField]
-    private GameController gameController = null;
+    private Flowchart nextFC = null;
 
     //Non serialized fields
     private bool isCompleted = false;
@@ -54,11 +53,6 @@ public abstract class QuestBase : MonoBehaviour
         return this.fC;
     }
 
-    public GameController getGameController()
-    {
-        return this.gameController;
-    }
-
     public int getCurrentDialogId()
     {
         return this.currentDialogId;
@@ -77,5 +71,15 @@ public abstract class QuestBase : MonoBehaviour
     public void executeOtherCharacterDialog()
     {
         this.getFC().ExecuteBlock(this.getDialog()[this.getOtherCharacterDialogId()]);
+    }
+
+    public void disableThisFlowChart()
+    {
+        this.fC.gameObject.SetActive(false);
+    }
+
+    public void activateNextFlowChart()
+    {
+        this.nextFC.gameObject.SetActive(true);
     }
 }
