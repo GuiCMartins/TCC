@@ -18,10 +18,25 @@ public abstract class QuestBase : MonoBehaviour
 
     //Non serialized fields
     private bool isCompleted = false;
+    private int currentDialogId = 0;
+    private int otherCharacterDialogId = 0;
+
+    public abstract void setCurrentDialogId(int id);
+    public abstract void setOtherCharacterDialogId(int id);
 
     public void setIsCompleted()
     {
         this.isCompleted = true;
+    }
+
+    public void setBaseCurrentDialogId(int id)
+    {
+        this.currentDialogId = id;
+    }
+
+    public void setBaseOtherCharacterDialogId(int id)
+    {
+        this.otherCharacterDialogId = id;
     }
 
     public bool getIsCompleted()
@@ -42,5 +57,25 @@ public abstract class QuestBase : MonoBehaviour
     public GameController getGameController()
     {
         return this.gameController;
+    }
+
+    public int getCurrentDialogId()
+    {
+        return this.currentDialogId;
+    }
+
+    public int getOtherCharacterDialogId()
+    {
+        return this.otherCharacterDialogId;
+    }
+
+    public void executeCurrentDialog()
+    {
+        this.getFC().ExecuteBlock(this.getDialog()[this.getCurrentDialogId()]);
+    }
+
+    public void executeOtherCharacterDialog()
+    {
+        this.getFC().ExecuteBlock(this.getDialog()[this.getOtherCharacterDialogId()]);
     }
 }

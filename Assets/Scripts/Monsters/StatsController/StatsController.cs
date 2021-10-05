@@ -24,6 +24,10 @@ public class StatsController : MonoBehaviour
         }
         else
         {
+            if (this.gameObject.tag == "MonsterPoint")
+            {
+                this.gameObject.GetComponent<QuestMonsterPoint>().setCurrentDialogId();
+            }
             this.lifeBar.GetComponent<lifeBarController>().setCurrentLife(0);
             Destroy(this.gameObject);
         }

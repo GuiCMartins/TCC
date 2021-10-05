@@ -13,6 +13,8 @@ TagManager:
   - Inventory
   - StatsDamageText
   - StatsLifeText
+  - QuestPoint
+  - MonsterPoint
   layers:
   - Default
   - TransparentFX

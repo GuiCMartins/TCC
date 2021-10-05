@@ -4,37 +4,30 @@ using UnityEngine;
 
 public class InitialQuest : QuestBase
 {
-    //Non Serialized Fields
-    private int currentDialogId = 0;
-    private int otherCharacterDialogId = 0;
+    [Header("Quest points configuration")]
+    [SerializeField]
+    private GameObject questPoint = null;
+    [Header("Quest points configuration")]
+    [SerializeField]
+    private GameObject monster = null;
 
-    public void setCurrentDialogId(int id)
+    public override void setCurrentDialogId(int id)
     {
-        this.currentDialogId = id;
+        base.setBaseCurrentDialogId(id);
     }
 
-    public void setOtherCharacterDialogId(int id)
+    public override void setOtherCharacterDialogId(int id)
     {
-        this.otherCharacterDialogId = id;
+        base.setBaseOtherCharacterDialogId(id);
     }
 
-    public int getCurrentDialogId()
+    public void activateQuestPoint()
     {
-        return this.currentDialogId;
+        this.questPoint.SetActive(true);
     }
 
-    public int getOtherCharacterDialogId()
+    public void activateMonster()
     {
-        return this.otherCharacterDialogId;
-    }
-
-    public void executeCurrentDialog()
-    {
-        this.getFC().ExecuteBlock(this.getDialog()[this.getCurrentDialogId()]);
-    }
-
-    public void executeOtherCharacterDialogId()
-    {
-        this.getFC().ExecuteBlock(this.getDialog()[this.getOtherCharacterDialogId()]);
+        this.monster.SetActive(true);
     }
 }

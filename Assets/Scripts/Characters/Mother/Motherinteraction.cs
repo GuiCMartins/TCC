@@ -13,7 +13,10 @@ public class Motherinteraction : Interaction
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            this.initialQuest.executeOtherCharacterDialogId();
+            if (this.initialQuest.getOtherCharacterDialogId() == 4)
+            {
+                this.initialQuest.executeOtherCharacterDialog();
+            }
         }
     }
 }

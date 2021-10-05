@@ -26,13 +26,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //teste de integração com a barra de vida do HUD
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            this.playerStats.takeDamage(7);
-        }
-        //Fim do teste
-
         callInteractionMethod();
     }
 
@@ -51,9 +44,10 @@ public class PlayerController : MonoBehaviour
         {
             this.playerStats.takeDamage(7);
         }
-        else if (collider.tag == "TESTE")
+        else if (collider.tag == "QuestPoint")
         {
-            this.initialQuest.setCurrentDialogId(1);
+            collider.gameObject.GetComponent<QuestPoint>().executeDialog();
+            Destroy(collider.gameObject);
         }
     }
 
