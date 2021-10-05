@@ -20,7 +20,14 @@ public class InteractionCharacter : Interaction
     {
         if (!this.initialQuest.getIsCompleted())
         {
-            this.initialQuest.executeCurrentDialog();
+            if (this.initialQuest.getIsCurrentDialog())
+            {
+                this.initialQuest.executeCurrentDialog();
+            }
+            else
+            {
+                this.initialQuest.executeOtherCharacterDialogId();
+            }
         }
     }
 }

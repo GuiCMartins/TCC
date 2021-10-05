@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (collider.tag == "TESTE")
         {
-            this.initialQuest.setCurrentDialogId(1);
+            this.initialQuest.setIsCurrentDialog(false);
         }
     }
 

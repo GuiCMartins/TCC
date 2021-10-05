@@ -6,10 +6,27 @@ public class InitialQuest : QuestBase
 {
     //Non Serialized Fields
     private int currentDialogId = 0;
+    private int otherCharacterDialogId = 0;
+    private bool isCurrentDialog = true;
 
     public void setCurrentDialogId(int id)
     {
         this.currentDialogId = id;
+    }
+
+    public void setOtherCharacterDialogId(int id)
+    {
+        this.otherCharacterDialogId = id;
+    }
+
+    public void setIsCurrentDialog(bool isCurrentDialog)
+    {
+        this.isCurrentDialog = isCurrentDialog;
+    }
+
+    public bool getIsCurrentDialog()
+    {
+        return this.isCurrentDialog;
     }
 
     public int getCurrentDialogId()
@@ -17,8 +34,18 @@ public class InitialQuest : QuestBase
         return this.currentDialogId;
     }
 
+    public int getOtherCharacterDialogId()
+    {
+        return this.otherCharacterDialogId;
+    }
+
     public void executeCurrentDialog()
     {
         this.getFC().ExecuteBlock(this.getDialog()[this.getCurrentDialogId()]);
+    }
+
+    public void executeOtherCharacterDialogId()
+    {
+        this.getFC().ExecuteBlock(this.getDialog()[this.getOtherCharacterDialogId()]);
     }
 }
