@@ -26,6 +26,7 @@ public abstract class QuestBase : MonoBehaviour
     public void setIsCompleted()
     {
         this.isCompleted = true;
+        Destroy(this);
     }
 
     public void setBaseCurrentDialogId(int id)

@@ -7,7 +7,7 @@ public class InitialQuest : QuestBase
     [Header("Quest points configuration")]
     [SerializeField]
     private GameObject questPoint = null;
-    [Header("Quest points configuration")]
+    [Header("Monster configuration")]
     [SerializeField]
     private GameObject monster = null;
 

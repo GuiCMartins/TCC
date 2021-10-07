@@ -11,6 +11,7 @@ public class Fase1Quest : QuestBase
 
     //Non serialized fields
     private bool isAllMonterDead = false;
+    private bool isLastMonterDead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,13 @@ public class Fase1Quest : QuestBase
             setCurrentDialogId(0);
             base.executeCurrentDialog();
         }
+
+        if (!this.isLastMonterDead && this.monsters[3] == null)
+        {
+            this.isLastMonterDead = true;
+            setCurrentDialogId(1);
+            base.executeCurrentDialog();
+        }
     }
 
     public override void setCurrentDialogId(int id)
@@ -39,11 +47,16 @@ public class Fase1Quest : QuestBase
         base.setBaseOtherCharacterDialogId(id);
     }
 
+    public void setIsCompleted()
+    {
+        base.setIsCompleted();
+    }
+
     private bool verifyMonsterDead()
     {
-        foreach (GameObject monster in  this.monsters)
+        for (int i=0; i<3; i++)
         {
-            if (monster != null)
+            if (this.monsters[i] != null)
             {
                 return false;
             }
