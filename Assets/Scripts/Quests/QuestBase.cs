@@ -14,6 +14,9 @@ public abstract class QuestBase : MonoBehaviour
     private Flowchart fC = null;
     [SerializeField]
     private Flowchart nextFC = null;
+    [Header("Entrance configuration")]
+    [SerializeField]
+    private GameObject nextEntrance = null;
 
     //Non serialized fields
     private bool isCompleted = false;
@@ -82,5 +85,10 @@ public abstract class QuestBase : MonoBehaviour
     public void activateNextFlowChart()
     {
         this.nextFC.gameObject.SetActive(true);
+    }
+
+    public void activateNextEntrance()
+    {
+        this.nextEntrance.SetActive(true);
     }
 }
