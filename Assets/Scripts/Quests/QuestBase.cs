@@ -32,6 +32,16 @@ public abstract class QuestBase : MonoBehaviour
     public abstract void setCurrentDialogId(int id);
     public abstract void setOtherCharacterDialogId(int id);
 
+    public bool verifyAmulet(int id)
+    {
+        if (getGameController().transform.GetChild(1).GetComponent<Inventory>().getAmuletInInventory(id) != null)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
     public GameObject getGameController()
     {
         return this.gameController;

@@ -36,29 +36,19 @@ public class Fase1Quest : QuestBase
             base.executeCurrentDialog();
         }
 
-        if (!base.getIsGetFirstAmulet() && verifyAmulet(base.getIdAmulet(0)))
+        if (!base.getIsGetFirstAmulet() && base.verifyAmulet(base.getIdAmulet(0)))
         {
             base.updateIsGetFirstAmulet();
             setCurrentDialogId(2);
             base.executeCurrentDialog();
         }
 
-        if (!base.getIsGetSecondAmulet() && verifyAmulet(base.getIdAmulet(1)))
+        if (!base.getIsGetSecondAmulet() && base.verifyAmulet(base.getIdAmulet(1)))
         {
             base.updateIsGetSecondAmulet();
             setCurrentDialogId(3);
             base.executeCurrentDialog();
         }
-    }
-
-    public bool verifyAmulet(int id)
-    {
-        if (base.getGameController().transform.GetChild(1).GetComponent<Inventory>().getAmuletInInventory(id) != null)
-        {
-            return true;
-        }
-
-        return false;
     }
 
     public override void setCurrentDialogId(int id)
