@@ -7,7 +7,7 @@ public class PrevNextController : MonoBehaviour
     //Serialized Fields
     [Header("Pages configuration")]
     [SerializeField]
-    private GameObject[] pages = new GameObject[9];
+    private GameObject[] pages = new GameObject[8];
 
     //Non Serialized Fields
     private int countPages = 0;
