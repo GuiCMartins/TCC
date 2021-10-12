@@ -328,7 +328,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Gerenciatus
-  description: Teste
+  description: "Os sistemas de gerenciamento s\xE3o sempre bem vindos, afinal aumentam
+    a produtividade de toda a equipe de desenvolvimento. Aumentando tamb\xE9m o dano
+    e o acerto cr\xEDtico da arma."
   moreLife: 0
   moreDamage: 10
   damage: 0

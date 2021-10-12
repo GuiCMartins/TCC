@@ -325,7 +325,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Curtinas funcionatus
-  description: Teste
+  description: "Sua ajuda na manuten\xE7\xE3o de c\xF3digo \xE9 louv\xE1vel, visto
+    que fun\xE7\xF5es mais curtas s\xE3o destinadas a fazerem apenas uma especificidade.
+    Muito \xFAtil tamb\xE9m para proteger seu personagem das areias quentes de Systemia."
   moreLife: 40
   moreDamage: 0
   damage: 0

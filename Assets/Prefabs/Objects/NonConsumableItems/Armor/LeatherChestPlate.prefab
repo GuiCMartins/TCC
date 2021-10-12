@@ -325,7 +325,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Comentarium
-  description: Teste
+  description: "Pe\xE7a fundamental na melhora do trabalho em equipe, os coment\xE1rios
+    deixam claro o que cada peda\xE7o de c\xF3digo faz, mas n\xE3o exagere em seu
+    uso. Aparentemente tamb\xE9m te previne de levar uma espadada no peito."
   moreLife: 70
   moreDamage: 0
   damage: 0

@@ -325,7 +325,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Identus
-  description: Teste
+  description: "Uma forte aliada para melhorar a legibilidade de c\xF3digo. Al\xE9m
+    de  te proteger de alguma pancada na cabe\xE7a."
   moreLife: 50
   moreDamage: 0
   damage: 0
