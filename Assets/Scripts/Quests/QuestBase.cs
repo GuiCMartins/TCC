@@ -17,14 +17,55 @@ public abstract class QuestBase : MonoBehaviour
     [Header("Entrance configuration")]
     [SerializeField]
     private GameObject nextEntrance = null;
+    [Header("Amulet quest id configuration")]
+    [SerializeField]
+    private int[] idAmulet = new int[2];
 
     //Non serialized fields
+    private GameObject gameController = null;
     private bool isCompleted = false;
     private int currentDialogId = 0;
     private int otherCharacterDialogId = 0;
+    private bool isGetFirstAmulet = false;
+    private bool isGetSecondAmulet = false;
 
     public abstract void setCurrentDialogId(int id);
     public abstract void setOtherCharacterDialogId(int id);
+
+    public GameObject getGameController()
+    {
+        return this.gameController;
+    }
+
+    public void setGameController(GameObject gameController)
+    {
+        this.gameController = gameController;
+    }
+
+    public int getIdAmulet(int id)
+    {
+        return this.idAmulet[id];
+    }
+
+    public bool getIsGetFirstAmulet()
+    {
+        return this.isGetFirstAmulet;
+    }
+
+    public void updateIsGetFirstAmulet()
+    {
+        this.isGetFirstAmulet = true;
+    }
+
+    public bool getIsGetSecondAmulet()
+    {
+        return this.isGetSecondAmulet;
+    }
+
+    public void updateIsGetSecondAmulet()
+    {
+        this.isGetSecondAmulet = true;
+    }
 
     public void setIsCompleted()
     {

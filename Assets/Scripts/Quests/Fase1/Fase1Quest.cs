@@ -16,7 +16,7 @@ public class Fase1Quest : QuestBase
     // Start is called before the first frame update
     void Start()
     {
-        
+        base.setGameController(GameObject.FindWithTag("GameController"));
     }
 
     // Update is called once per frame
@@ -35,6 +35,30 @@ public class Fase1Quest : QuestBase
             setCurrentDialogId(1);
             base.executeCurrentDialog();
         }
+
+        if (!base.getIsGetFirstAmulet() && verifyAmulet(base.getIdAmulet(0)))
+        {
+            base.updateIsGetFirstAmulet();
+            setCurrentDialogId(2);
+            base.executeCurrentDialog();
+        }
+
+        if (!base.getIsGetSecondAmulet() && verifyAmulet(base.getIdAmulet(1)))
+        {
+            base.updateIsGetSecondAmulet();
+            setCurrentDialogId(3);
+            base.executeCurrentDialog();
+        }
+    }
+
+    public bool verifyAmulet(int id)
+    {
+        if (base.getGameController().transform.GetChild(1).GetComponent<Inventory>().getAmuletInInventory(id) != null)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     public override void setCurrentDialogId(int id)

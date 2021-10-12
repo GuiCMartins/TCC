@@ -70,6 +70,11 @@ public class Inventory : MonoBehaviour
         return this.itemsInInventory[id];
     }
 
+    public GameObject getAmuletInInventory(int id)
+    {
+        return this.amuletsInInventory[id];
+    }
+
     public void useItem(GameObject item)
     {
         item.GetComponent<UseItemBase>().useItem();

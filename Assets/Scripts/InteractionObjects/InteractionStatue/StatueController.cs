@@ -15,6 +15,7 @@ public class StatueController : MonoBehaviour
     //Non serialized fields
     private int[] finalUnlock = new int[4] { 0, 1, 2, 3 };
     private bool isDoorClose = true;
+    private bool isGetTheAmulet = false;
 
     // Start is called before the first frame update
     void Start()
@@ -34,11 +35,16 @@ public class StatueController : MonoBehaviour
     {
         if (this.isDoorClose)
         {
-            if (isAllStatuesRight())
+            if (isAllStatuesRight() && isGetTheAmulet)
             {
                 openDoor();
             }
         }
+    }
+
+    public void updateIsGetTheAmulet()
+    {
+        this.isGetTheAmulet = true;
     }
 
     private void openDoor()
