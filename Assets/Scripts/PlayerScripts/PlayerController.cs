@@ -40,10 +40,6 @@ public class PlayerController : MonoBehaviour
             this.interactionObj = collider.gameObject;
             collider.gameObject.SendMessage("setInteractiveComplements", true);
         }
-        else if (collider.tag == "Damage")
-        {
-            this.playerStats.takeDamage(7);
-        }
         else if (collider.tag == "QuestPoint")
         {
             collider.gameObject.GetComponent<QuestPoint>().executeDialog();

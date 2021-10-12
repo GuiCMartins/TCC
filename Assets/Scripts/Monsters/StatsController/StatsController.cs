@@ -28,6 +28,10 @@ public class StatsController : MonoBehaviour
             {
                 this.gameObject.GetComponent<QuestMonsterPoint>().setCurrentDialogId();
             }
+            else if (this.gameObject.tag == "AmuletMonster")
+            {
+                this.gameObject.SendMessage("dropAmulet");
+            }
             this.lifeBar.GetComponent<lifeBarController>().setCurrentLife(0);
             Destroy(this.gameObject);
         }

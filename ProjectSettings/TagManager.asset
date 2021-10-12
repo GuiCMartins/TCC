@@ -15,6 +15,7 @@ TagManager:
   - StatsLifeText
   - QuestPoint
   - MonsterPoint
+  - AmuletMonster
   layers:
   - Default
   - TransparentFX

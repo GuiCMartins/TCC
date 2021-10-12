@@ -15,7 +15,7 @@ public class PlayerAtackDamage : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.tag == "Monster" || collider.tag == "MonsterPoint")
+        if (collider.tag == "Monster" || collider.tag == "MonsterPoint" || collider.tag == "AmuletMonster")
         {
             int damage = this.gameController.GetComponent<GameController>().getPlayerAttackDamage();
             collider.gameObject.SendMessage("takeDamage", damage);
