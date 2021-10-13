@@ -68,7 +68,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 945835927
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -9219537292396255111, guid: c36183ca765e33b41970e4f4063b9d4d,
     type: 3}
@@ -256,7 +256,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 945835927
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: -1334926847936292013, guid: c36183ca765e33b41970e4f4063b9d4d,
     type: 3}
@@ -420,5 +420,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeBar: {fileID: 4322481416612462958}
-  totalLife: 20
-  currentLife: 20
+  totalLife: 50
+  currentLife: 50
