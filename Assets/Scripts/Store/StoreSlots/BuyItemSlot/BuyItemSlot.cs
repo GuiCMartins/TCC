@@ -14,6 +14,9 @@ public class BuyItemSlot : MonoBehaviour
     [Header("Parent configuration")]
     [SerializeField]
     private GameObject parent = null;
+    [Header("Price configuration")]
+    [SerializeField]
+    private int price = 100;
 
     //Non serialized field
     private GameObject gameController = null;
@@ -22,13 +25,17 @@ public class BuyItemSlot : MonoBehaviour
     {
         this.gameController = GameObject.FindWithTag("GameController");
 
-        if (this.gameController.transform.GetChild(1).GetComponent<Inventory>().isAnySlotInInventoryEmpty())
+        if (this.gameController.GetComponent<GameController>().getPlayerCoins() >= this.price)
         {
-            GameObject newItem = Instantiate(this.item, new Vector3(this.locationToDropItem.position.x, this.locationToDropItem.position.y, 0), Quaternion.identity);
-            newItem.SetActive(false);
-            newItem.transform.SetParent(this.parent.transform);
+            if (this.gameController.transform.GetChild(1).GetComponent<Inventory>().isAnySlotInInventoryEmpty())
+            {
+                this.gameController.GetComponent<GameController>().setPlayerCoins(-this.price);
+                GameObject newItem = Instantiate(this.item, new Vector3(this.locationToDropItem.position.x, this.locationToDropItem.position.y, 0), Quaternion.identity);
+                newItem.SetActive(false);
+                newItem.transform.SetParent(this.parent.transform);
 
-            this.gameController.transform.GetChild(1).GetComponent<Inventory>().addItem(newItem);
+                this.gameController.transform.GetChild(1).GetComponent<Inventory>().addItem(newItem);
+            }
         }
     }
 

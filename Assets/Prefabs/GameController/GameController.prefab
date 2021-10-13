@@ -5644,7 +5644,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0 Systemia Coin
+  m_text: 60 Systemia Coin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7078,7 +7078,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0 Systemia Coin
+  m_text: 150 Systemia Coin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7391,7 +7391,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0 Systemia Coin
+  m_text: 75 Systemia Coin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8052,6 +8052,7 @@ MonoBehaviour:
   locationToDropItem: {fileID: 5095381094109191282, guid: a899c39a047edb545ae6695a8700ccd0,
     type: 3}
   parent: {fileID: 8526578913553058989}
+  price: 20
 --- !u!1 &802057878061406613
 GameObject:
   m_ObjectHideFlags: 0
@@ -9229,6 +9230,7 @@ MonoBehaviour:
   locationToDropItem: {fileID: 5095381094109191282, guid: a899c39a047edb545ae6695a8700ccd0,
     type: 3}
   parent: {fileID: 8526578913553058989}
+  price: 75
 --- !u!1 &1122251901664091676
 GameObject:
   m_ObjectHideFlags: 0
@@ -9797,6 +9799,7 @@ MonoBehaviour:
   locationToDropItem: {fileID: 5095381094109191282, guid: a899c39a047edb545ae6695a8700ccd0,
     type: 3}
   parent: {fileID: 8526578913553058989}
+  price: 50
 --- !u!1 &1214380027335981615
 GameObject:
   m_ObjectHideFlags: 0
@@ -10637,7 +10640,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0 Systemia Coin
+  m_text: 70 Systemia Coin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13052,7 +13055,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0 Systemia Coin
+  m_text: 200 Systemia Coin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15861,7 +15864,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0 Systemia Coin
+  m_text: 25 Systemia Coin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16017,7 +16020,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0 Systemia Coin
+  m_text: 110 Systemia Coin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16299,6 +16302,7 @@ MonoBehaviour:
   locationToDropItem: {fileID: 5095381094109191282, guid: a899c39a047edb545ae6695a8700ccd0,
     type: 3}
   parent: {fileID: 8526578913553058989}
+  price: 200
 --- !u!1 &2991547585119001018
 GameObject:
   m_ObjectHideFlags: 0
@@ -16519,7 +16523,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0 Systemia Coin
+  m_text: 75 Systemia Coin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16843,7 +16847,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0 Systemia Coin
+  m_text: 50 Systemia Coin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -17032,6 +17036,7 @@ MonoBehaviour:
   locationToDropItem: {fileID: 5095381094109191282, guid: a899c39a047edb545ae6695a8700ccd0,
     type: 3}
   parent: {fileID: 8526578913553058989}
+  price: 75
 --- !u!1 &3223906653198684138
 GameObject:
   m_ObjectHideFlags: 0
@@ -17252,7 +17257,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0 Systemia Coin
+  m_text: 75 Systemia Coin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -17441,6 +17446,7 @@ MonoBehaviour:
   locationToDropItem: {fileID: 5095381094109191282, guid: a899c39a047edb545ae6695a8700ccd0,
     type: 3}
   parent: {fileID: 8526578913553058989}
+  price: 40
 --- !u!1 &3469237575663569843
 GameObject:
   m_ObjectHideFlags: 0
@@ -17691,6 +17697,7 @@ MonoBehaviour:
   locationToDropItem: {fileID: 5095381094109191282, guid: a899c39a047edb545ae6695a8700ccd0,
     type: 3}
   parent: {fileID: 8526578913553058989}
+  price: 70
 --- !u!1 &3581536930450369345
 GameObject:
   m_ObjectHideFlags: 0
@@ -17788,6 +17795,7 @@ MonoBehaviour:
   locationToDropItem: {fileID: 5095381094109191282, guid: a899c39a047edb545ae6695a8700ccd0,
     type: 3}
   parent: {fileID: 8526578913553058989}
+  price: 50
 --- !u!1 &3584889831470823696
 GameObject:
   m_ObjectHideFlags: 0
@@ -20497,7 +20505,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0 Systemia Coin
+  m_text: 75 Systemia Coin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -21034,6 +21042,7 @@ MonoBehaviour:
   locationToDropItem: {fileID: 5095381094109191282, guid: a899c39a047edb545ae6695a8700ccd0,
     type: 3}
   parent: {fileID: 8526578913553058989}
+  price: 85
 --- !u!1 &4402667271415949656
 GameObject:
   m_ObjectHideFlags: 0
@@ -21231,7 +21240,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0 Systemia Coin
+  m_text: 90 Systemia Coin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -21513,6 +21522,7 @@ MonoBehaviour:
   locationToDropItem: {fileID: 5095381094109191282, guid: a899c39a047edb545ae6695a8700ccd0,
     type: 3}
   parent: {fileID: 8526578913553058989}
+  price: 25
 --- !u!1 &4540206658523047602
 GameObject:
   m_ObjectHideFlags: 0
@@ -30313,7 +30323,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0 Systemia Coin
+  m_text: 40 Systemia Coin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -31862,6 +31872,7 @@ MonoBehaviour:
   locationToDropItem: {fileID: 5095381094109191282, guid: a899c39a047edb545ae6695a8700ccd0,
     type: 3}
   parent: {fileID: 8526578913553058989}
+  price: 75
 --- !u!1 &5778075213483331560
 GameObject:
   m_ObjectHideFlags: 0
@@ -34747,6 +34758,7 @@ MonoBehaviour:
   locationToDropItem: {fileID: 5095381094109191282, guid: a899c39a047edb545ae6695a8700ccd0,
     type: 3}
   parent: {fileID: 8526578913553058989}
+  price: 150
 --- !u!1 &6701870492726364486
 GameObject:
   m_ObjectHideFlags: 0
@@ -36814,6 +36826,7 @@ MonoBehaviour:
   locationToDropItem: {fileID: 5095381094109191282, guid: a899c39a047edb545ae6695a8700ccd0,
     type: 3}
   parent: {fileID: 8526578913553058989}
+  price: 75
 --- !u!1 &7188496847872024866
 GameObject:
   m_ObjectHideFlags: 0
@@ -37721,6 +37734,7 @@ MonoBehaviour:
   locationToDropItem: {fileID: 5095381094109191282, guid: a899c39a047edb545ae6695a8700ccd0,
     type: 3}
   parent: {fileID: 8526578913553058989}
+  price: 60
 --- !u!1 &7553292740406628491
 GameObject:
   m_ObjectHideFlags: 0
@@ -40360,6 +40374,7 @@ MonoBehaviour:
   locationToDropItem: {fileID: 5095381094109191282, guid: a899c39a047edb545ae6695a8700ccd0,
     type: 3}
   parent: {fileID: 8526578913553058989}
+  price: 90
 --- !u!1 &8256932488383349346
 GameObject:
   m_ObjectHideFlags: 0
@@ -40888,7 +40903,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0 Systemia Coin
+  m_text: 85 Systemia Coin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -41942,6 +41957,7 @@ MonoBehaviour:
   locationToDropItem: {fileID: 5095381094109191282, guid: a899c39a047edb545ae6695a8700ccd0,
     type: 3}
   parent: {fileID: 8526578913553058989}
+  price: 110
 --- !u!1 &8567918648752243676
 GameObject:
   m_ObjectHideFlags: 0
@@ -42006,7 +42022,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0 Systemia Coin
+  m_text: 20 Systemia Coin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -44099,7 +44115,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0 Systemia Coin
+  m_text: 50 Systemia Coin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
