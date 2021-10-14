@@ -8,9 +8,12 @@ public class GameController : MonoBehaviour
     [Header("Quests configuration")]
     [SerializeField]
     private List<QuestBase> quests = new List<QuestBase>();
+    [Header("CheckPoint configuration")]
+    [SerializeField]
+    private Transform checkPoint = null;
 
     //Non serialized fields
-    //Obj
+    //Objects
     private System.Random randNum = new System.Random();
     private GameObject player = null;
     //playerStats
@@ -166,6 +169,11 @@ public class GameController : MonoBehaviour
         this.playerCoins += valueCoin;
     }
 
+    public void setCheckPoint(Transform checkPoint)
+    {
+        this.checkPoint = checkPoint;
+    }
+
     public void setQuestId(int questId)
     {
         this.questId = questId;
@@ -217,6 +225,11 @@ public class GameController : MonoBehaviour
     }
 
     //Get
+
+    public Transform getCheckPoint()
+    {
+        return this.checkPoint;
+    }
 
     public int getPlayerDamageMax()
     {

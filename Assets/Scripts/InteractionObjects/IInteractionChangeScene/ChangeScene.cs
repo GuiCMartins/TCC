@@ -29,6 +29,15 @@ public class ChangeScene : Interaction
     [SerializeField]
     private double sizePlayerY = 0.0;
 
+    //Non serialized fields
+    private GameObject gameController = null;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        this.gameController = GameObject.FindWithTag("GameController");
+    }
+
     public override void interaction()
     {
         changeScene();
@@ -39,6 +48,7 @@ public class ChangeScene : Interaction
         if (Input.GetKeyDown(KeyCode.F))
         {
             System.Console.Write("Standard DateTime Format Specifiers");
+            this.gameController.GetComponent<GameController>().setCheckPoint(this.targetPlace);
             this.player.transform.position = this.targetPlace.position;
             flip();
             this.confiner.m_BoundingShape2D = this.bounding;

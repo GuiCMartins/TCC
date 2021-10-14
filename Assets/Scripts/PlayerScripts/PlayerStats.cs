@@ -44,9 +44,16 @@ public class PlayerStats : MonoBehaviour
 
     public void takeDamage(int damage)
     {
-        this.currentLife -= damage;
-        this.gameController.GetComponent<GameController>().updatePlayerCurrentLife();
-        this.gameController.GetComponent<HudController>().setLifeBar();
+        if (this.gameController.GetComponent<GameController>().getPlayerCurrentLife() - damage > 0)
+        {
+            this.currentLife -= damage;
+            this.gameController.GetComponent<GameController>().updatePlayerCurrentLife();
+            this.gameController.GetComponent<HudController>().setLifeBar();
+        }
+        else
+        {
+            this.gameObject.GetComponent<PlayerController>().dead();
+        }
     }
 
     //Calculate

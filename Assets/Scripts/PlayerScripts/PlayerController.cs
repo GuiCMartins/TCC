@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    //Non serialized fields
-    private Rigidbody2D rigidBody;
-    [SerializeField]
-    private GameObject interactionObj;
-
     //Serialized fields
     [Header("Scrip PlayerStats configuration")]
     [SerializeField]
@@ -17,9 +12,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private InitialQuest initialQuest = null;
 
+    //Non serialized fields
+    private Rigidbody2D rigidBody = null;
+    private GameObject interactionObj = null;
+    private GameObject gameController = null;
+
     // Start is called before the first frame update
     void Start()
     {
+        this.gameController = GameObject.FindWithTag("GameController");
         this.rigidBody = GetComponent<Rigidbody2D>();
     }
 
@@ -62,6 +63,14 @@ public class PlayerController : MonoBehaviour
             this.interactionObj = null;
             collider.gameObject.SendMessage("setInteractiveComplements", false);
         }
+    }
+
+    public void dead()
+    {
+        this.gameObject.transform.position = this.gameController.GetComponent<GameController>().getCheckPoint().position;
+        this.gameController.GetComponent<GameController>().setPlayerCurrentLife(this.gameController.GetComponent<GameController>().getPlayerTotalLife());
+        this.gameController.GetComponent<GameController>().updatePlayerCurrentLife();
+        this.gameController.GetComponent<HudController>().setLifeBar();
     }
 
     private void callInteractionMethod()
