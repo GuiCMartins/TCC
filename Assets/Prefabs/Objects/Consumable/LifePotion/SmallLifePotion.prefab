@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: "Po\xE7\xE3o de vida pequena"
-  description: Cura instantaneamente uma % de vida do personagem.
+  description: Cura instantaneamente uma xx% de vida do personagem.
   moreLife: 0
   moreDamage: 0
   damage: 0
