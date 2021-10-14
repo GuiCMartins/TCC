@@ -20,6 +20,7 @@ public class AtackDamageRange : MonoBehaviour
     {
         this.player = GameObject.FindWithTag("Player").GetComponent<Transform>();
         this.playerPosition = this.player.position;
+        StartCoroutine("destroyBall");
     }
 
     // Update is called once per frame
@@ -35,5 +36,11 @@ public class AtackDamageRange : MonoBehaviour
             collider.gameObject.SendMessage("takeDamage", this.damage);
             Destroy(this.gameObject);
         }
+    }
+
+    IEnumerator destroyBall()
+    {
+        yield return new WaitForSeconds(2.5f);
+        Destroy(this.gameObject);
     }
 }

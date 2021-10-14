@@ -19,10 +19,8 @@ public class AtackAnimationTriggers : MonoBehaviour
         this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
     }
 
-    IEnumerator atackRange()
+    public void atackRange()
     {
-        GameObject p = Instantiate(this.projectile, transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(1.5f);
-        Destroy(p);
+        Instantiate(this.projectile, transform.position, Quaternion.identity);
     }
 }
