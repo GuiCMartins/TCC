@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class PlayerController : MonoBehaviour
     [Header("Quest configuration")]
     [SerializeField]
     private InitialQuest initialQuest = null;
+    [Header("Die FlowChart configuration")]
+    [SerializeField]
+    private Flowchart dieFlowChart = null;
 
     //Non serialized fields
     private Rigidbody2D rigidBody = null;
@@ -65,12 +69,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void dead()
+    public IEnumerator dead()
     {
+        this.gameObject.GetComponent<Animator>().Play("Die");
+        yield return new WaitForSeconds(2.1f);
+        this.gameObject.GetComponent<Animator>().Play("Idle");
         this.gameObject.transform.position = this.gameController.GetComponent<GameController>().getCheckPoint().position;
         this.gameController.GetComponent<GameController>().setPlayerCurrentLife(this.gameController.GetComponent<GameController>().getPlayerTotalLife());
         this.gameController.GetComponent<GameController>().updatePlayerCurrentLife();
         this.gameController.GetComponent<HudController>().setLifeBar();
+        this.dieFlowChart.ExecuteBlock("Die");
     }
 
     private void callInteractionMethod()

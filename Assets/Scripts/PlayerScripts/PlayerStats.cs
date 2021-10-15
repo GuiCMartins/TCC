@@ -52,7 +52,7 @@ public class PlayerStats : MonoBehaviour
         }
         else
         {
-            this.gameObject.GetComponent<PlayerController>().dead();
+            StartCoroutine(this.gameObject.GetComponent<PlayerController>().dead());
         }
     }
 
