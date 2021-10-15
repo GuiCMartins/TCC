@@ -147,9 +147,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 'Refactus '
   description: "\xC9 de fundamental import\xE2ncia que um c\xF3digo siga evoluindo
-    e se qualificando, dessa forma a refatora\xE7\xE3o permite, melhorar a estrutura
-    do c\xF3digo sem mexer em seu comportamento. Al\xE9m de tamb\xE9m aumentar o
-    seu dano e seu acerto cr\xEDtico."
+    e se qualificando. Dessa forma, a refatora\xE7\xE3o permite melhorar a estrutura
+    do c\xF3digo sem modificar seu comportamento. Tamb\xE9m aumenta seu dano e seu
+    acerto cr\xEDtico."
   moreLife: 0
   moreDamage: 0
   damage: 35-60

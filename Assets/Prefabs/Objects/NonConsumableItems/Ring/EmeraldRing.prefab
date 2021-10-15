@@ -329,7 +329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Designis
   description: "Este faz uma bela dupla com o Patternus, tamb\xE9m aumentando a qualidade
-    do c\xF3digo. E tamb\xE9m aumenta a sua chance de acerto cr\xEDtico."
+    do c\xF3digo. Al\xE9m de aumentar tamb\xE9m a sua chance de acerto cr\xEDtico."
   moreLife: 0
   moreDamage: 0
   damage: 0

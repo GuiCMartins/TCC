@@ -325,8 +325,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Testus
-  description: "Com testes a chance de identificar bugs e erros durante a fase de
-    desenvolvimento \xE9 bastante grande. Al\xE9m de deixar o seu personagem com
+  description: "Com testes adequados, a chance de identificar bugs e erros durante
+    a fase de desenvolvimento aumenta muito. Al\xE9m de deixar seu personagem com
     uma quantidade de vida bastante robusta."
   moreLife: 200
   moreDamage: 0

@@ -146,9 +146,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Qualis
-  description: "Ah a qualidade de software, t\xE3o importante... \xC9 com ela que
+  description: "Ah, a qualidade de software, t\xE3o importante... \xC9 com ela que
     conseguimos garantir a qualidade de todas as 8 caracter\xEDsticas da norma ISO/IEC
-    25010. Al\xE9m de aumentar o seu dano e seu acerto cr\xEDtico, \xE9 claro."
+    25010. Al\xE9m de aumentar seu dano e seu acerto cr\xEDtico, \xE9 claro."
   moreLife: 0
   moreDamage: 0
   damage: 20-40

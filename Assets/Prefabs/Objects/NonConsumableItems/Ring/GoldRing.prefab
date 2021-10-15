@@ -145,8 +145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Revisium
   description: "A revis\xE3o de c\xF3digo \xE9 uma pr\xE1tica muito interessante
-    a se seguir, afinal, aumenta a qualidade do software, al\xE9m de compartilhar
-    conhecimentos entre os programadores. E \xE9 claro, aumenta a vida de seu personagem."
+    a ser seguida, pois aumenta a qualidade do software. E ainda permite compartilhar
+    conhecimentos entre desenvolvedores. E claro, aumenta a vida de seu personagem."
   moreLife: 75
   moreDamage: 0
   damage: 0

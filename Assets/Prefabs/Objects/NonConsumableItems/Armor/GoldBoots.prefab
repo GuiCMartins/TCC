@@ -142,9 +142,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: "Err\xEDneos tratis"
-  description: "Uma grande ajuda nos tratamentos de erros, prevenindo e tratando
-    as exce\xE7\xF5es que ocorrem durante uma aplica\xE7\xE3o. Ah se Aquiles estivesse
-    usando uma dessas na hora da flechada em seu calcanhar."
+  description: "Uma grande ajuda no tratamento de erros, prevenindo e tratando as
+    exce\xE7\xF5es que ocorrem durante uma aplica\xE7\xE3o. Ah se Aquiles tivesse
+    uma dessas na hora da flechada em seu calcanhar."
   moreLife: 100
   moreDamage: 0
   damage: 0

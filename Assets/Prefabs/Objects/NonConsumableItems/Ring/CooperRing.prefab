@@ -144,8 +144,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Patternus
-  description: "Se bem utilizados os padr\xF5es de projetos aumentam a qualidade
-    do c\xF3digo, deixando este mais flex\xEDvel e reutiliz\xE1vel. Al\xE9m de aumentar
+  description: "Quando bem utilizados, os padr\xF5es de projeto aumentam a qualidade
+    do c\xF3digo, deixando-o mais flex\xEDvel e reutiliz\xE1vel. Al\xE9m de aumentar
     significativamente o dano de sua arma."
   moreLife: 0
   moreDamage: 15

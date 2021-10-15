@@ -325,9 +325,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Naminus intuitos
-  description: "Outra grande aliada para melhorar a legibilidade de c\xF3digo, afinal,
-    com nomes mais intuitivos a leitura fica mais f\xE1cil. Al\xE9m tamb\xE9m de
-    n\xE3o deixar nenhuma espada furar sua cabe\xE7a."
+  description: "Outra grande aliada para melhorar a legibilidade de c\xF3digo. Com
+    nomes mais intuitivos, a leitura fica mais f\xE1cil. E ainda n\xE3o deixa uma
+    espada furar sua cabe\xE7a."
   moreLife: 150
   moreDamage: 0
   damage: 0

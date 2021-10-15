@@ -330,8 +330,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Codus cleaner
   description: "Ter um c\xF3digo limpo e estruturado desde o come\xE7o da aplica\xE7\xE3o
-    \xE9 sempre vantajoso, afinal um clean code ajuda, e muito, na manuten\xE7\xE3o
-    de um projeto. Al\xE9m de aumentar o seu dano e seu acerto cr\xEDtico, \xE9 claro."
+    \xE9 sempre vantajoso. O clean code ajuda, e muito, na manuten\xE7\xE3o de um
+    projeto. Al\xE9m de aumentar seu dano e seu acerto cr\xEDtico, \xE9 claro."
   moreLife: 0
   moreDamage: 0
   damage: 55-70
