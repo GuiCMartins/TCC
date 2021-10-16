@@ -27,6 +27,8 @@ public class StatsController : MonoBehaviour
             if (this.gameObject.tag == "MonsterPoint")
             {
                 this.gameObject.GetComponent<QuestMonsterPoint>().setCurrentDialogId();
+                this.gameObject.GetComponent<QuestMonsterPoint>().getQuestText().GetComponent<QuestBookTextController>().changeColortextToCompletedMission();
+                this.gameObject.GetComponent<QuestMonsterPoint>().getQuestText().GetComponent<QuestBookTextController>().apearNewMission();
             }
             else if (this.gameObject.tag == "AmuletMonster")
             {

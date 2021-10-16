@@ -11,9 +11,17 @@ public class QuestMonsterPoint : MonoBehaviour
     [Header("Quest id configuration")]
     [SerializeField]
     private int questId = 0;
+    [Header("Quest Text configuration")]
+    [SerializeField]
+    private GameObject questText = null;
 
     public void setCurrentDialogId()
     {
         quest.setBaseCurrentDialogId(this.questId);
+    }
+
+    public GameObject getQuestText()
+    {
+        return this.questText;
     }
 }
