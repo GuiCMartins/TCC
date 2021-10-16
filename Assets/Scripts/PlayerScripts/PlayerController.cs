@@ -56,6 +56,8 @@ public class PlayerController : MonoBehaviour
     {
         if(collider.tag == "InteractionObj")
         {
+            this.interactionObj = collider.gameObject;
+            collider.gameObject.SendMessage("setInteractiveComplements", true);
             this.rigidBody.WakeUp();           
         }
     }
