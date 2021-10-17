@@ -9003,7 +9003,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 75 Systemia Coin
+  m_text: 25 Systemia Coin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11148,7 +11148,7 @@ MonoBehaviour:
   locationToDropItem: {fileID: 5095381094109191282, guid: a899c39a047edb545ae6695a8700ccd0,
     type: 3}
   parent: {fileID: 8526578913553058989}
-  price: 75
+  price: 25
 --- !u!1 &1122251901664091676
 GameObject:
   m_ObjectHideFlags: 0
@@ -21607,7 +21607,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 75 Systemia Coin
+  m_text: 25 Systemia Coin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -22120,7 +22120,7 @@ MonoBehaviour:
   locationToDropItem: {fileID: 5095381094109191282, guid: a899c39a047edb545ae6695a8700ccd0,
     type: 3}
   parent: {fileID: 8526578913553058989}
-  price: 75
+  price: 25
 --- !u!1 &3223906653198684138
 GameObject:
   m_ObjectHideFlags: 0
@@ -22571,7 +22571,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 75 Systemia Coin
+  m_text: 25 Systemia Coin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -27407,7 +27407,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 75 Systemia Coin
+  m_text: 25 Systemia Coin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -40372,7 +40372,7 @@ MonoBehaviour:
   locationToDropItem: {fileID: 5095381094109191282, guid: a899c39a047edb545ae6695a8700ccd0,
     type: 3}
   parent: {fileID: 8526578913553058989}
-  price: 75
+  price: 25
 --- !u!1 &5778075213483331560
 GameObject:
   m_ObjectHideFlags: 0
@@ -46935,7 +46935,7 @@ MonoBehaviour:
   locationToDropItem: {fileID: 5095381094109191282, guid: a899c39a047edb545ae6695a8700ccd0,
     type: 3}
   parent: {fileID: 8526578913553058989}
-  price: 75
+  price: 25
 --- !u!1 &7188496847872024866
 GameObject:
   m_ObjectHideFlags: 0
