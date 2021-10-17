@@ -50,14 +50,16 @@ public class PlayerStats : MonoBehaviour
             if (this.gameController.GetComponent<GameController>().getPlayerCurrentLife() - damage > 0)
             {
                 this.currentLife -= damage;
-                this.gameController.GetComponent<GameController>().updatePlayerCurrentLife();
-                this.gameController.GetComponent<HudController>().setLifeBar();
             }
             else
             {
+                this.currentLife = 0;
                 setIsPlayerDead(true);
                 StartCoroutine(this.gameObject.GetComponent<PlayerController>().dead());
             }
+
+            this.gameController.GetComponent<GameController>().updatePlayerCurrentLife();
+            this.gameController.GetComponent<HudController>().setLifeBar();
         }
     }
 

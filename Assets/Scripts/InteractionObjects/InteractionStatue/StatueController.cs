@@ -13,7 +13,7 @@ public class StatueController : MonoBehaviour
     private GameObject door = null;
 
     //Non serialized fields
-    private int[] finalUnlock = new int[4] { 0, 1, 2, 3 };
+    private int[] finalUnlock = new int[4] { 3, 2, 2, 3 };
     private bool isDoorClose = true;
     private bool isGetTheAmulet = false;
 
@@ -51,7 +51,7 @@ public class StatueController : MonoBehaviour
     {
         System.Random randomNumber = new System.Random();
 
-        for (int i=0; i<this.finalUnlock.Length; i++)
+        for (int i=2; i<this.finalUnlock.Length; i++)
         {
             this.finalUnlock[i] = randomNumber.Next(4);
         }

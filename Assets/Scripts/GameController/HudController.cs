@@ -63,7 +63,6 @@ public class HudController : MonoBehaviour
 
     public void setCurrentLifeText()
     {
-        Debug.Log(this.currentLifeText);
         this.currentLifeText.text = this.gameObject.GetComponent<GameController>().getPlayerCurrentLife().ToString();
     }
 
