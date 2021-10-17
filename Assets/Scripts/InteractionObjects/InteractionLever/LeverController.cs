@@ -21,13 +21,6 @@ public class LeverController : MonoBehaviour
     void Start()
     {
         setFinalUnlock();
-
-        Debug.Log("Primeiro puzzle");
-
-        for (int i = 0; i < 3; i++)
-        {
-            Debug.Log(this.finalUnlock[i]);
-        }
     }
 
     // Update is called once per frame

@@ -101,7 +101,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5095381094109191287}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -34.29, y: -0.38, z: -1.7557535}
   m_LocalScale: {x: 2.2, y: 2.2, z: 1}
   m_Children:
@@ -233,7 +233,7 @@ MonoBehaviour:
   damageMinBase: 10
   criticalChanceBase: 0
   criticalDamagePercentBase: 0
-  currentLife: 50
+  currentLife: 100
 --- !u!114 &5095381094109191279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,9 +246,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09fe8455257df6a40b33a7f93385afd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionObj: {fileID: 0}
   playerStats: {fileID: 5095381094109191278}
   initialQuest: {fileID: 0}
+  dieFlowChart: {fileID: 0}
 --- !u!114 &5095381094109191284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cfa5d0016be05c4db7f740c4261d626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 3
 --- !u!114 &5220140592532196158
 MonoBehaviour:
   m_ObjectHideFlags: 0

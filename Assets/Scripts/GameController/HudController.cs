@@ -13,9 +13,14 @@ public class HudController : MonoBehaviour
     [Header("HUD life bar configuration")]
     [SerializeField]
     private Image lifeBar = null;
+    [Header("HUD Stats life configuration")]
+    [SerializeField]
+    private GameObject statsLife = null;
+    [Header("HUD stats damage configuration")]
+    [SerializeField]
+    private GameObject StatsDamage = null;
 
     //Non serialized fields
-    private GameObject gameController = null;
     private TextMeshProUGUI totalLifeText = null;
     private TextMeshProUGUI currentLifeText = null;
     private TextMeshProUGUI damageMaxText = null;
@@ -26,13 +31,12 @@ public class HudController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.gameController = GameObject.FindWithTag("GameController");
-        this.totalLifeText = GameObject.FindWithTag("StatsLifeText").transform.GetChild(4).GetComponent<TextMeshProUGUI>();
-        this.currentLifeText = GameObject.FindWithTag("StatsLifeText").transform.GetChild(2).GetComponent<TextMeshProUGUI>();
-        this.damageMinText = GameObject.FindWithTag("StatsDamageText").transform.GetChild(0).transform.GetChild(1).GetComponent<TextMeshProUGUI>();
-        this.damageMaxText = GameObject.FindWithTag("StatsDamageText").transform.GetChild(1).transform.GetChild(1).GetComponent<TextMeshProUGUI>();
-        this.criticalDamageText = GameObject.FindWithTag("StatsDamageText").transform.GetChild(2).transform.GetChild(1).GetComponent<TextMeshProUGUI>();
-        this.criticalChanceText = GameObject.FindWithTag("StatsDamageText").transform.GetChild(3).transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+        this.totalLifeText = statsLife.transform.GetChild(4).GetComponent<TextMeshProUGUI>();
+        this.currentLifeText = statsLife.transform.GetChild(2).GetComponent<TextMeshProUGUI>();
+        this.damageMinText = StatsDamage.transform.GetChild(0).transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+        this.damageMaxText = StatsDamage.transform.GetChild(1).transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+        this.criticalDamageText = StatsDamage.transform.GetChild(2).transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+        this.criticalChanceText = StatsDamage.transform.GetChild(3).transform.GetChild(1).GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
@@ -43,43 +47,44 @@ public class HudController : MonoBehaviour
 
     private void setCoinText()
     {
-        string s = this.gameController.GetComponent<GameController>().getPlayerCoins().ToString("N0");
+        string s = this.gameObject.GetComponent<GameController>().getPlayerCoins().ToString("N0");
         this.text.text = s.Replace(",", ".");
     }
 
     public void setLifeBar()
     { 
-        this.lifeBar.fillAmount = ((float)this.gameController.GetComponent<GameController>().getPlayerCurrentLife() / (float)this.gameController.GetComponent<GameController>().getPlayerTotalLife());
+        this.lifeBar.fillAmount = ((float)this.gameObject.GetComponent<GameController>().getPlayerCurrentLife() / (float)this.gameObject.GetComponent<GameController>().getPlayerTotalLife());
     }
 
     public void setTotalLifeText()
     {
-        this.totalLifeText.text = this.gameController.GetComponent<GameController>().getPlayerTotalLife().ToString();
+        this.totalLifeText.text = this.gameObject.GetComponent<GameController>().getPlayerTotalLife().ToString();
     }
 
     public void setCurrentLifeText()
     {
-        this.currentLifeText.text = this.gameController.GetComponent<GameController>().getPlayerCurrentLife().ToString();
+        Debug.Log(this.currentLifeText);
+        this.currentLifeText.text = this.gameObject.GetComponent<GameController>().getPlayerCurrentLife().ToString();
     }
 
     public void setDamageMinText()
     {
-        this.damageMinText.text = this.gameController.GetComponent<GameController>().getPlayerDamageMin().ToString();
+        this.damageMinText.text = this.gameObject.GetComponent<GameController>().getPlayerDamageMin().ToString();
     }
 
     public void setDamageMaxText()
     {
-        this.damageMaxText.text = this.gameController.GetComponent<GameController>().getPlayerDamageMax().ToString();
+        this.damageMaxText.text = this.gameObject.GetComponent<GameController>().getPlayerDamageMax().ToString();
     }
 
     public void setCriticalDamageText()
     {
-        this.criticalDamageText.text = this.gameController.GetComponent<GameController>().getPlayerCriticalDamage().ToString();
+        this.criticalDamageText.text = this.gameObject.GetComponent<GameController>().getPlayerCriticalDamage().ToString();
     }
 
     public void setCriticalChanceText()
     {
-        this.criticalChanceText.text = this.gameController.GetComponent<GameController>().getPlayerCriticalChance().ToString();
+        this.criticalChanceText.text = this.gameObject.GetComponent<GameController>().getPlayerCriticalChance().ToString();
     }
 
     public float getLifeBarPercent()

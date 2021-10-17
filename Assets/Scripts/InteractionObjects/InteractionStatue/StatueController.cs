@@ -21,13 +21,6 @@ public class StatueController : MonoBehaviour
     void Start()
     {
         setFinalUnlock();
-
-        Debug.Log("Segundo puzzle");
-
-        for (int i = 0; i < 4; i++)
-        {
-            Debug.Log(this.finalUnlock[i]);
-        }
     }
 
     // Update is called once per frame
