@@ -30,6 +30,7 @@ public class PlayerStats : MonoBehaviour
     private int moreDamage = 0;
     private int moreCriticalChance = 0;
     private float criticalDamagePercent = 0;
+    private bool isPlayerDead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -44,15 +45,19 @@ public class PlayerStats : MonoBehaviour
 
     public void takeDamage(int damage)
     {
-        if (this.gameController.GetComponent<GameController>().getPlayerCurrentLife() - damage > 0)
+        if (!this.isPlayerDead)
         {
-            this.currentLife -= damage;
-            this.gameController.GetComponent<GameController>().updatePlayerCurrentLife();
-            this.gameController.GetComponent<HudController>().setLifeBar();
-        }
-        else
-        {
-            StartCoroutine(this.gameObject.GetComponent<PlayerController>().dead());
+            if (this.gameController.GetComponent<GameController>().getPlayerCurrentLife() - damage > 0)
+            {
+                this.currentLife -= damage;
+                this.gameController.GetComponent<GameController>().updatePlayerCurrentLife();
+                this.gameController.GetComponent<HudController>().setLifeBar();
+            }
+            else
+            {
+                setIsPlayerDead(true);
+                StartCoroutine(this.gameObject.GetComponent<PlayerController>().dead());
+            }
         }
     }
 
@@ -173,6 +178,11 @@ public class PlayerStats : MonoBehaviour
     public void setBaseCriticalDamagePercent()
     {
         this.criticalDamagePercent = this.criticalDamagePercentBase;
+    }
+
+    public void setIsPlayerDead(bool isPlayerDead)
+    {
+        this.isPlayerDead = isPlayerDead;
     }
 
     //Get

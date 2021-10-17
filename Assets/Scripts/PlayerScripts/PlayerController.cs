@@ -81,6 +81,8 @@ public class PlayerController : MonoBehaviour
         this.gameController.GetComponent<GameController>().updatePlayerCurrentLife();
         this.gameController.GetComponent<HudController>().setLifeBar();
         this.dieFlowChart.ExecuteBlock("Die");
+        this.gameController.GetComponent<PlayerTriesController>().updateTries();
+        this.gameObject.GetComponent<PlayerStats>().setIsPlayerDead(false);
     }
 
     private void callInteractionMethod()
