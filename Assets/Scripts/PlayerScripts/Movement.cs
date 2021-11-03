@@ -41,8 +41,8 @@ public class Movement : MonoBehaviour
 
     private void setMovementation()
     {
-        this.position.x = Input.GetAxis("Horizontal") * this.speed * Time.deltaTime;
-        this.position.y = Input.GetAxis("Vertical") * this.speed * Time.deltaTime;
+        this.position.x = Input.GetAxis("Horizontal") * this.speed * Time.fixedDeltaTime;
+        this.position.y = Input.GetAxis("Vertical") * this.speed * Time.fixedDeltaTime;
 
         if(this.position.x != 0 && !GetComponent<Attack>().getIsAtacking() || this.position.y != 0 && !GetComponent<Attack>().getIsAtacking())
         {
